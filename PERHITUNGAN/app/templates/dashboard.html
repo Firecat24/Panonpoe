@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Posisi HIlal, Hilal OASA</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/qhad.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style/dashboard.css')}}">
+    <script src="/static/javascript/dashboard2.js"></script>
+</head>
+<body>
+  {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top ps-sm-5 bar_atas">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="/home">
+            <img src="{{ url_for('static', filename='img/QHAD_putihan.png') }}" alt="Logo QHAD">
+            Lab Falak
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#home" onclick="closeNavbar()">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu" onclick="closeNavbar()">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#berita" onclick="closeNavbar()">Berita</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" onclick="closeNavbar()">Contact</a>
+              </li>
+              <li>
+                <div class="pengguna">
+                  <img src="{{ url_for('static', filename='boxicon/user_op.png') }}" alt="user">
+                    {% if username %}
+                      <a href="#" id="logout_user">{{ username }}</a>
+                    {% else %}
+                      <a href="/login">Login</a>
+                    {% endif %}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <section class="container-fluid text-center text-sm-start diatas_konten" id="home">
+      <div class="d-flex align-items-center konten">
+        <div class="tulisan_konten">
+          <div class="judul-salat">
+            <h1><span id="city">{{kota}}</span>, <span>{{prov}}</span><br><span id="country">{{negara}}</span><br><span id="tanggal">{{tanggal}}</span></h1>
+          </div>
+          <hr>
+          {% if username %}
+            <h4>Selamat Datang {{ username }} !</h4>
+          {% else %}
+            <h4>Halo, Selamat Datang!</h4>
+          {% endif %}
+          <p>Temukan cara termudah dan akurat dalam membantu proses perhitungan hilalmu. Gunakan secara gratis!</p>
+          <p>Dengan Login anda dapat mengakses lebih banyak fitur pada website ini seperti mengupload foto pada galeri dan sebagainya</p>
+          {% if username %}	
+          {% else %}
+            <div class="tombolah">
+              <a href="/login" class="button_login" >Login</a>
+              <a href="/daftar_login" class="button_daftar" >Daftar</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="gambar_konten ms-auto">
+          <img class="img-fluid d-none d-sm-block" src="{{ url_for('static', filename='img/bulan.png') }}" alt="bulan">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_header" id="salat-lima-waktu">
+        <span class="line"></span>
+        <span class="text">JADWAL SALAT HARI INI</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="waktusalat">
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Shubuh</h1>
+            <p id="subuh">{{subuh}}</p>
+          </div>
+        </div>
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Imsak</h1>
+            <p id="imsak">{{imsak}}</p>
+          </div>
+        </div>
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Zuhur</h1>
+            <p id="zuhur">{{zuhur}}</p>
+          </div>
+        </div>
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Ashar</h1>
+            <p id="asar">{{asar}}</p>
+          </div>
+        </div>
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Magrib</h1>
+            <p id="magrib">{{magrib}}</p>
+          </div>
+        </div>
+        <div class="box-lima-waktu">
+          <div class="salat">
+            <h1>Isya</h1>
+            <p id="isya">{{isya}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_header" id="fase-bulan">
+        <span class="line"></span>
+        <span class="text">FASE BULAN</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="judul-fase">
+        <h1 id="tanggal_hijriah">{{tanggal_hijriah}}</h1>
+      </div>
+
+      <div class="fase-bulan">
+        <div class="box-fase-bulan">
+          <div class="fase">
+            <h1>Bulan Baru</h1>
+            <img src="{{ url_for('static', filename='fase-bulan/new.png') }}" alt="Kuartal Pertama">
+            <p id="waktu_bulan_baru">{{waktu_bulan_baru}}</p>
+            <p style="font-size: 15px;" id="tanggal_bulan_baru">{{tanggal_bulan_baru}}</p>
+          </div>
+        </div>
+        <div class="box-fase-bulan">
+          <div class="fase">
+            <h1>Kuartal Awal</h1>
+            <img src="{{ url_for('static', filename='fase-bulan/kuartal-2.png') }}" alt="Kuartal Pertama">
+            <p id="waktu_quartal1">{{waktu_quartal1}}</p>
+            <p style="font-size: 15px;" id="tanggal_quartal1">{{tanggal_quartal1}}</p>
+          </div>
+        </div>
+        <div class="box-fase-bulan">
+          <div class="fase">
+            <h1>Bulan Penuh</h1>
+            <img src="{{ url_for('static', filename='fase-bulan/full.png') }}" alt="Kuartal Pertama">
+            <p id="waktu_bulan_purnama">{{waktu_bulan_purnama}}</p>
+            <p style="font-size: 15px;" id="tanggal_bulan_purnama">{{tanggal_bulan_purnama}}</p>
+          </div>
+        </div>
+        <div class="box-fase-bulan">
+          <div class="fase">
+            <h1>Kuartal Akhir</h1>
+            <img src="{{ url_for('static', filename='fase-bulan/kuartal-3.png') }}" alt="Kuartal Pertama">
+            <p id="waktu_quartal3">{{waktu_quartal3}}</p>
+            <p style="font-size: 15px;" id="tanggal_quartal3">{{tanggal_quartal3}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_header" id="menu">
+        <span class="line"></span>
+        <span class="text">MENU</span>
+        <span class="line"></span>
+      </div>
+    
+      <div class="button_menu" id="button_menu">
+          <div class="box_button_menu">
+              <div class="box_button_judul">
+                  <h1>Galeri</h1>
+              </div>
+              <hr class="alamat_hr">
+              <div class="deskripsi">
+                  <p>Tempat dimana semua foto video mengenai pengamatan benda langit bisa di upload dan dilihat</p>
+              </div>
+              <hr class="alamat_hr">
+              <div class="tombol_pergi">
+                  <a href="{{ url_for('hasil_pengamatan') }}" class="button_daftar">Pergi ke Galeri</a>
+              </div>
+          </div>
+    
+          <div class="box_button_menu">
+              <div class="box_button_judul">
+                  <h1>Kalkulator Hilal</h1>
+              </div>
+              <hr class="alamat_hr">
+              <div class="deskripsi">
+                  <p>Menghitung posisi hilal dengan menggunakan algoritma Jean Meeus.</p>
+              </div>
+              <hr class="alamat_hr">
+              <div class="tombol_pergi">
+                  <a href="{{ url_for('main_menu') }}" class="button_daftar">Pergi Menghitung</a>
+              </div>
+          </div>
+    
+          <div class="box_button_menu">
+            <div class="box_button_judul">
+                <h1>Jadwal Sholat</h1>
+            </div>
+            <hr class="alamat_hr">
+            <div class="deskripsi">
+                <p>Jadwal sholat fardhu, dalam 1 bulan penuh</p>
+            </div>
+            <hr class="alamat_hr">
+            <div class="tombol_pergi">
+                <a href="{{ url_for('jadwal_salat') }}" class="button_daftar">Pergi Melihat</a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_header" id="berita">
+        <span class="line"></span>
+        <span class="text">NEWS</span>
+        <span class="line"></span>
+      </div>
+    
+      <div class="gambar_konten_hasil">
+        <img id="dynamicImage" class="img-fluid" src="{{ url_for('static', filename='gambar_upload/' + gambar) }}" alt="gambar-berubah">
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="bar_terakhir" id="contact">
+      <div class="kontak">
+          <h3>PHONE</h3>
+          <a href="https://wa.me/6282333693379" class="email">+6282333693379</a>
+          <h3>EMAIL</h3>
+          <a href="mailto:admin@labfalak.com" class="email">admin@labfalak.com</a>
+          <div class="sosialmedia">
+              <a class="facebook-button" href="https://www.facebook.com/">
+                  <img class="facebook-logo" src="{{ url_for('static', filename='img/fb.png') }}">
+              </a>
+              <a class="instagram-button" href="https://www.instagram.com/">
+                  <img class="instagram-logo" src="{{ url_for('static', filename='img/ig.png') }}">
+              </a>
+              <a class="linkedin-button" href="https://www.linkedin.com/">
+                  <img class="linkedin-logo" src="{{ url_for('static', filename='img/linkedin.png') }}">
+              </a>
+          </div>
+      </div>
+      <div class="informasi">
+          <h3>INFORMATION</h3>
+          <hr class="informasi_hr">
+          <ul class="list_informasi">
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact Us</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2024 Laboratorium Ilmu Falak. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+</body>
+<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static',filename='bootstrap/popper/popper.min.js')}}"></script>
+<script src="{{ url_for('static',filename='javascript/dashboard.js')}}"></script>
+</html>

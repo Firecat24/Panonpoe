@@ -1,0 +1,19 @@
+.tombol_submit{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.data {
+    border: 2px solid green;
+    overflow: scroll;
+}
+h2{
+    width: auto;
+}
+.download_text_bulan{
+    align-items: center;
+    text-align: center;
+}
+body{
+    width: 100%;
+}

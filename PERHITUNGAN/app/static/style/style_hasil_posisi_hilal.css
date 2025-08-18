@@ -1,0 +1,26 @@
+.tombol_submit{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.data {
+    border: 2px solid green;
+    width: auto;
+}
+body{
+    width: 100%;
+}
+@media screen and (max-width: 710px) {
+    .data{
+        width: 700px;
+    }
+    h2{
+        width: 700px;
+    }
+    .tombol_submit{
+        width: 700px;
+    }
+    body{
+        overflow: scroll;
+    }
+}

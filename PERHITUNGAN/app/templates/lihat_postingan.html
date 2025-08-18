@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pengamatan</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/qhad.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style/lihat_postingan.css')}}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top ps-sm-5 bar_atas" style="background-color: #ffffff;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="/home">
+                    <img src="{{ url_for('static',filename='img/QHAD_Putihan.png')}}" alt="Logo">
+                    Lab Falak
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item">
+                            <div class="tambah_postingan">
+                                <a href="/tambah_postingan" class="nav-link">Tambahkan Postingan</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                        <li>
+                            <div class="pengguna">
+                                <img src="{{ url_for('static', filename='boxicon/user_op.png') }}" alt="user">
+                                  {% if username %}
+                                    <a href="#" id="logout_user">{{ username }}</a>
+                                  {% else %}
+                                    <a href="/login">Login</a>
+                                  {% endif %}
+                              </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            {% if posts %}
+                <div class="semua">
+                    <div class="gambar_div">
+                        <img class="gambar" src="{{ url_for('static', filename='gambar_upload/' + posts['gambar']) }}" alt="{{ posts['judul'] }}">
+                    </div>
+                    <div class="box_button_menu">
+                        <div class="box_button_judul">
+                            <h1>{{ posts.judul }}</h1>
+                        </div>
+                        <hr class="alamat_hr">
+                        <div class="deskripsi">
+                            <p>{{ posts.deskripsi }}</p>
+                        </div>
+                        <hr class="alamat_hr">
+                        <div class="deskripsi">
+                            <p>Lokasi : {{ posts.lokasi }}</p>
+                            <p>Diunggah pada : {{ posts.waktu }}</p>
+                            <p>Diunggah oleh : {{ posts.username }}</p>
+                        </div>
+                        <hr class="alamat_hr">
+                        <div class="tombol_pergi">
+                            <a href="/hasil_pengamatan" class="button_daftar">Kembali ke Halaman Postingan</a>
+                        </div>
+                        {% if session['uuid'] == posts.user_uuid or user['id'] == 1 or user['id'] == 2 %}
+                            <div class="tombol_pergi_kedua">
+                                <a href="{{url_for('edit_postingan', post_id=posts.id)}}" class="button_daftar_edit">Edit</a>
+                                <a href="#" class="button_daftar_delete" id="confirmDelete" post_id="{{ posts.id }}">Hapus</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>© 2024 Laboratorium Ilmu Falak. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{ url_for('static',filename='bootstrap/popper/popper.min.js')}}"></script>
+<script src="{{ url_for('static',filename='javascript/postingan.js')}}"></script>
+</html>

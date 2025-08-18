@@ -1,0 +1,18 @@
+.tombol_submit{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.data {
+    border: 2px solid green;
+    overflow: scroll;
+}
+.download_text_matahari{
+    text-align: center;
+}
+body{
+    width: fit-content;
+}
+h2{
+    width: auto;
+}

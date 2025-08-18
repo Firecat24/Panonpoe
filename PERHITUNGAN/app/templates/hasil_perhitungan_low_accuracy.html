@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Hasil Perhitungan Posisi Matahari Low Accuracy</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/qhad.ico')}}">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/style/style_hasil_low_accuracy.css'>
+</head>
+<body>
+    <h2 style="text-align: center;">Hasil Perhitungan Posisi Matahari Low Accuracy Jean Meeus</h2>
+    <div class="data">
+        <table class="table">
+            <tr>
+                <th>L0</th>
+                <td>=</td>
+                <td>{{L0}}</td>
+                <th>M</th>
+                <td>=</td>
+                <td>{{M}}</td>
+                <th>Eksentrisitas</th>
+                <td>=</td>
+                <td>{{eksentrisitas}}</td>
+            </tr>
+            <tr>
+                <th>C</th>
+                <td>=</td>
+                <td>{{C}}</td>
+                <th>Longitude</th>
+                <td>=</td>
+                <td>{{longitude}}</td>
+                <th>R</th>
+                <td>=</td>
+                <td>{{R}}</td>
+            </tr>
+            <tr>
+                <th>Omega</th>
+                <td>=</td>
+                <td>{{omega}}</td>
+                <th>Lamda</th>
+                <td>=</td>
+                <td>{{lamda}}</td>
+                <th>Right Ascension</th>
+                <td>=</td>
+                <td>{{right_ascension_low}}</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+                <th>Deklinasi</th>
+                <td>=</td>
+                <td>{{deklinasi}}</td>
+                <th></th>
+                <td></td>
+                <td></td>
+            </tr>
+          </table>
+    </div>
+    <div class="tombol_submit">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="/cek_data" class="btn btn-success">Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+</body>
+</html>

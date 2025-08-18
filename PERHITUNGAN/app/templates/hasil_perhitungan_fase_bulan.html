@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Hasil Perhitungan Fase Bulan</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='img/qhad.ico')}}">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/style/style_hasil_fase_bulan.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 style="text-align: center;">Hasil Perhitungan Fase Bulan Jean Meeus</h2>
+    <div class="data">
+        <table class="table">
+            <tr>
+                <th>K</th>
+                <td>=</td>
+                <td>{{k_fase_bulan}}</td>
+                <th>T</th>
+                <td>=</td>
+                <td>{{T_fase_bulan}}</td>
+                <th>JDE</th>
+                <td>=</td>
+                <td>{{JDE_fase_bulan}}</td>
+            </tr>
+            <tr>
+                <th>M</th>
+                <td>=</td>
+                <td>{{M_fase_bulan}}</td>
+                <th>M'</th>
+                <td>=</td>
+                <td>{{M_aksen_fase_bulan}}</td>
+                <th>F</th>
+                <td>=</td>
+                <td>{{F_fase_bulan}}</td>
+            </tr>
+            <tr>
+                <th>Omega</th>
+                <td>=</td>
+                <td>{{omega_fase_bulan}}</td>
+                <th>Koreksi Semua Fase Bulan</th>
+                <td>=</td>
+                <td>{{correction_all_phase}}</td>
+                <th>New Moon</th>
+                <td>=</td>
+                <td>{{new_moon}}</td>
+            </tr>
+            <tr>
+                <th>b</th>
+                <td>=</td>
+                <td>{{year0}}</td>
+            </tr>
+            <tr>
+                <th>JDE Awal Bulan</th>
+                <td>=</td>
+                <td>{{JDE_fase_bulan_new}}</td>
+                <th>Jam Awal Bulan</th>
+                <td>=</td>
+                <td>{{jam_new_moon_baru}} : {{menit_new_moon}} : {{detik_new_moon}}</td>
+                <th>Tanggal Awal Bulan</th>
+                <td>=</td>
+                <td>{{tanggal_fase_bulan}} : {{bulan_fase_bulan}} : {{tahun_fase_bulan}}</td>
+            </tr>
+          </table>
+    </div>
+    <div class="tombol_submit">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="/cek_data" class="btn btn-success">Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+    <hr>
+    <p style="text-align: center;">Berikut ini adalah fungsi untuk mengetahui new moon pada beberapa bulan kedepan</p>
+    <form method="post" action="/fase_bulan_dua">
+        <div class="input-group" id="input_perulangan">
+            <span class="input-group-text" id="inputGroup-default">jumlah bulan =</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="pengulangan_fase_bulan" value="">
+            <span class="input-group-text" id="inputGroup-default">Bulan</span>
+        </div>
+        <div class="tombol_submit">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="submit" class="btn btn-danger" name="fase_bulan"> START </button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap');
+@font-face {
+    font-family: montserrat;
+    src: url(/static/font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: gotham;
+    src: url(/static/font/gotham_rounded/Gotham_Rounded_Medium.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: gotham;
+}
+/* .semua {
+
+} */
+
+/* bar atas logo dan user */
+
+.bar_atas{
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container-fluid .navbar-brand img{
+    width: 40px;
+}
+
+.pengguna {
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #023919;
+    padding: 0 5px;
+    margin-left: 30px;
+    width: auto;
+    border-radius: 5px;
+}
+.pengguna i {
+    font-size: 35px;
+    margin: 5px 0 5px 5px;
+}
+.pengguna a{
+    font-size: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.pengguna a:hover{
+    font-size: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: #0a9b44;
+}
+
+.nav-item .nav-link {
+    color: #023919;
+}
+.nav-item :hover{
+    color: #0a9b44;
+}
+
+.tombol_submit{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.data {
+    width: 100%;
+    height: 100%;
+    border: 2px solid green;
+    overflow-x: auto;
+}
+
+.semua{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+.gambar{
+    width: 97%;
+    height: 100%;
+    margin: 1%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #023919;
+    border-radius: 5px;
+}
+
+.box_button_menu{
+    margin: 10px 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #023919;
+    border-radius: 5px;
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.box_button_menu .deskripsi{
+    color: #023919;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    }
+.box_button_menu .deskripsi p{
+    margin: 10px 20px;
+}
+.box_button_menu .tombol_pergi{
+    height: 84px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.box_button_menu h1{
+    font-size: 50px;
+    margin: 0 0 10px 0;
+    font-family: montserrat;
+    font-weight: bold;
+    color: #023919;
+}
+
+.button_daftar {
+    background-color: #023919;
+    color: #ffffff;
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_daftar:hover {
+    background-color: #0a9b44;
+    color: #fff;
+}
+
+.button_daftar_edit {
+    background-color: #170080;
+    color: #ffffff;
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin: 0 2% 0 0;
+}
+.button_daftar_delete {
+    font-size: 15px;
+    background-color: red;
+    color: #ffffff;
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.button_daftar_delete:hover,
+.button_daftar_edit:hover,
+.button_daftar:hover {
+    background-color: #0a9b44;
+    color: #fff;
+}
+.tombol_pergi_kedua{
+    height: auto;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.alamat_hr{
+    height: 2px; 
+    background-color: #0a9b44;
+    opacity: 100%; 
+    border: none;
+    margin: 10px 0;
+}
+
+.copyright {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #023919;
+}
+.copyright p{
+    margin: 0;
+}
+
+@media only screen and (max-width:576px){
+    .pengguna {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: #023919;
+        padding: 0 5px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .pengguna i {
+        font-size: 35px;
+        margin: 5px;
+    }
+    .pengguna p{
+        font-size: 15px;
+        margin: 2px;
+    }
+    .konten{
+        padding-top: 20px;
+        transition: 1s ease;
+    }
+    .box_button_menu{
+        margin: 10px 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border: 1px solid #023919;
+        border-radius: 5px;
+        background-color: white;
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .box_button_menu .deskripsi{
+        color: #023919;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        }
+    .box_button_menu .deskripsi p{
+        margin: 10px 20px;
+    }
+    .box_button_menu .tombol_pergi{
+        height: 84px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .box_button_menu h1{
+        font-size: 30px;
+        margin: 0 0 10px 0;
+        font-family: montserrat;
+        font-weight: bold;
+        color: #023919;
+    }
+}

@@ -1,0 +1,16 @@
+Tanggal New Moon = 00/01/2025     Waktu Matahari Tenggelam = 17.49.42
+                        
+                                Data Matahari
+
+        Azimuth         = 246:04:07                  Altitude          = -01:00:02          
+        Asensiorekta    = 281:11:58                  Deklinasi         = -23:34:52           
+        Bujur Ekliptika = 280:15:15                  Lintang Ekliptika = -0.5404494739775115   
+                    
+                    
+                                Data Hilal
+
+        Azimuth         = 243:16:42               Altitude          = 006:05:39          
+        Asensiorekta    = 288:37:54               Deklinasi         = -27:11:38             
+        Bujur Ekliptika = 286:34:10               Lintang Ekliptika = -4.820793548627684   
+        Elongasi        = 07:37:26
+                            
