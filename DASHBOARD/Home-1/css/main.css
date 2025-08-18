@@ -65,7 +65,7 @@ body {
 [2. Start Slidert]
 --------------------------------------------------*/
 .slider {
-    background: url("http://placehold.jp/1600x900.png") center center no-repeat;
+    background: url("/DASHBOARD/Home-1/img/bg/background.jpg") center center no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
