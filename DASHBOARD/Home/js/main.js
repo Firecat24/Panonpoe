@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         var top = $(window).scrollTop();
         if (top >= 100) {
-            $('.navbar').css('background', '#353c4d');
+            $('.navbar').css('background', '#212529');
         } else if ($('.navbar').css(
             'background',
             'linear-gradient(135deg, rgba(22, 37, 43, 1) 0%, rgba(22, 37, 43, 1) 100%)'
