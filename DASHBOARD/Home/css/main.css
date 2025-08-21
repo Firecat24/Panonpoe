@@ -230,7 +230,8 @@ body {
 .services .right {
     background: url("http://placehold.jp/540x407.png") center center no-repeat;
     background-size: cover;
-    height: 407px;
+    height: 540px;
+    width: 673px;
 }
 .video-icon .icon {
     background: linear-gradient(135deg, rgba(2,166,199,1) 0%, rgba(3,127,152,1) 100%);

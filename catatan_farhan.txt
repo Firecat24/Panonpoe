@@ -1,0 +1,10 @@
+perubahan didalam dashboard untuk tampilan dibuat
+    landing page
+    penjelasan
+    pelanayan
+    lab falak
+    produk
+    publisher (belum)
+    jurnal
+
+publisher nanti kita siapkan juga landing pagenya agar lebih enak dikunjungi
