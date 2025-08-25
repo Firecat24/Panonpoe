@@ -27,7 +27,10 @@ $(document).ready(function () {
     //Counter Up
     $('.counter').counterUp({delay: 10, time: 3000});
     //Image Light Box Popup
-    $('.image-link').magnificPopup({type: 'image'});
+    $('.open-gallery').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
     $('.video-link').magnificPopup({type: 'iframe'});
     // Animate loader off screen
     $('.se-pre-con').fadeOut('slow');
