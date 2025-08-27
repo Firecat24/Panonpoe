@@ -471,6 +471,11 @@ body {
     transform: translateY(-7px);
 }
 
+.disabled-link {
+  pointer-events: none;   /* tidak bisa diklik */
+  opacity: 0.6;           /* tampak redup */
+  cursor: not-allowed;    /* cursor silang */
+}
 /*--------------------------------------------------
 [13. Contact]
 --------------------------------------------------*/
