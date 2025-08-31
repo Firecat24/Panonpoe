@@ -435,6 +435,51 @@ body {
 /*--------------------------------------------------
 [6. Start Our Mission]
 --------------------------------------------------*/
+.publish {
+    padding: 120px 0;
+}
+.publish .text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #313e4b;
+    margin-bottom: 20px;
+}
+.publish .text h2 span {
+    color: #02a2c4;
+    font-weight: 300;
+}
+.publish .text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+    color: #727f8c;
+    margin: 0 0 35px;
+    padding: 0;
+}
+.publish .text .btn-blue {
+    background: linear-gradient(135deg, rgba(2,166,199,1) 0%, rgba(3,127,152,1) 100%);
+    box-shadow: 3px 3px 51px 0 rgba(0,0,0,0.2);
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+.publish .text .btn-blue:hover {
+    transform: translateY(-7px);
+}
+
+.publish img,
+.mission img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
 .mission {
     padding: 120px 0;
 }
