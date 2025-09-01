@@ -228,10 +228,10 @@ body {
     color: #727f8c;
 }
 .services .right {
-    background: url("http://placehold.jp/540x407.png") center center no-repeat;
-    background-size: cover;
-    height: 540px;
-    width: 673px;
+    background: url("/DASHBOARD/Home/img/eksternal/1.png") center center no-repeat;
+    width: 100%;                 /* ikut lebar kolom */
+    aspect-ratio: 673 / 540;     /* rasio asli gambar (width/height) */
+    border-radius: 12px;         /* opsional */
 }
 .video-icon .icon {
     background: linear-gradient(135deg, rgba(2,166,199,1) 0%, rgba(3,127,152,1) 100%);
@@ -660,6 +660,8 @@ body {
     .mfp-inline-gallery img {
     max-width: 100%;
     }
+    .services .right { min-height: 240px; 
+    }
 }
 
 
@@ -714,6 +716,8 @@ body {
     .mfp-inline-gallery img {
     max-width: 100%;
     }
+    .services .right { min-height: 240px; 
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -766,5 +770,7 @@ body {
     }
     .mfp-inline-gallery img {
     max-width: 48%;
+    }
+    .services .right { min-height: 240px; 
     }
 }
