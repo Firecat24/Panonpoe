@@ -436,7 +436,12 @@ body {
 [6. Start Our Mission]
 --------------------------------------------------*/
 .publish {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
+}
+.mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .publish .text h2 {
     font-size: 30px;
@@ -574,6 +579,26 @@ body {
     color: #ffffff;
 }
 
+/*--------------------------------------------------
+[14. Start Footer]
+--------------------------------------------------*/
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 5px #999;
+    z-index: 1000;
+}
+.my-float {
+    margin-top: 12px;
+}
 /*--------------------------------------------------
 [14. Start Footer]
 --------------------------------------------------*/
