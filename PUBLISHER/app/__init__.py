@@ -13,5 +13,7 @@ def teardown_request(exception):
     if hasattr(g, "db"):
         g.db.disconnect()
 
-from .routes import bp
-app.register_blueprint(bp)
+from .routes.routes_submit import bp_submit
+from .routes.routes_dashboard import bp_dashboard
+app.register_blueprint(bp_dashboard)
+app.register_blueprint(bp_submit)
