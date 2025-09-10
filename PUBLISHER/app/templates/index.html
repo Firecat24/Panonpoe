@@ -8,25 +8,25 @@
         <title>Publisher Panonpoe Landing Page</title>
 
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap/bootstrap.min.css') }}">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap/bootstrap-theme.min.css') }}">
 
         <!-- Custom css -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}">
+
         <!-- Ionicons -->
-        <link rel="stylesheet" href="assets/css/ionicons.min.css">
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ionicons.min.css') }}">
+
         <!-- Owl -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.css">
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.css') }}">
+
         <!-- Magnific Popup -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,9 +57,9 @@
                     <nav class="navbar navbar-default">
                         <!--  Header Logo  -->
                         <div id="logo">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="../HTML/assets/img/eksternal/logo_3.png" class="normal" alt="logo">
-                                <img src="../HTML/assets/img/eksternal/logo_3@2x.png" class="retina" alt="logo">
+                            <a class="navbar-brand" href="#home-header">
+                                <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" class="normal" alt="logo">
+                                <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3@2x.png') }}" class="retina" alt="logo">
                             </a>
                         </div>
                         <!--  END Header Logo  -->
@@ -79,7 +79,7 @@
                                     <li>
                                         <a href="#faq" class="anchor">Layanan</a>
                                     </li>
-                                    <li class="submenu">
+                                    <!-- <li class="submenu">
                                         <a href="javascript:void(0)">Pages</a>
                                         <ul class="sub-menu">
                                             <li><a href="page.html">About</a></li>
@@ -94,7 +94,7 @@
                                             <li><a href="index-form.html">Form</a></li>
                                             <li><a href="index-get.html">Video</a></li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                             </div>
                             <div class="col-md-6 padding-leftright-null">
                                 <div class="text last padding-topbottom-null">
-                                    <img src="assets/img/book1.jpg" class="shadow main-img" alt="">
+                                    <img src="{{ url_for('static', filename='assets/img/book1.jpg') }}" class="shadow main-img" alt="Book">
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                             <div class="row no-margin padding-lg">
                                 <div class="col-lg-6 padding-leftright-null">
                                     <div class="text padding-topbottom-null">
-                                        <img src="assets/img/book-open.jpg" class="shadow" alt="">
+                                        <img src="{{ url_for('static', filename='assets/img/book-open.jpg') }}" class="shadow" alt="Book Open">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 padding-leftright-null">
@@ -231,7 +231,7 @@
                                     <div class="item padding-leftright-null">
                                         <div class="text padding-bottom-null">
                                             <div class="person">
-                                                <img src="assets/img/quote-girl.jpg" alt="">
+                                                <img src="{{ url_for('static', filename='assets/img/quote-girl.jpg') }}" alt="Quote Girl">
                                                 <div class="description">
                                                     <em>Anna Brown</em>
                                                     <span class="margin-null"> CEO at Index.com</span>
@@ -244,7 +244,7 @@
                                     <div class="item padding-leftright-null">
                                         <div class="text padding-bottom-null">
                                             <div class="person">
-                                                <img src="assets/img/quote-man.jpg" alt="">
+                                                <img src="{{ url_for('static', filename='assets/img/quote-man.jpg') }}" alt="Quote Man">
                                                 <div class="description">
                                                     <em>John Doe</em>
                                                     <span class="margin-null">CMO at Company.com</span>
@@ -256,7 +256,7 @@
                                     <div class="item padding-leftright-null">
                                         <div class="text padding-bottom-null">
                                             <div class="person">
-                                                <img src="assets/img/quote-girl-two.jpg" alt="">
+                                                <img src="{{ url_for('static', filename='assets/img/quote-girl-two.jpg') }}" alt="Quote Girl Two">
                                                 <div class="description">
                                                     <em>Susan Tril</em>
                                                     <span class="margin-null">Designer at Pink.com</span>
@@ -285,7 +285,7 @@
                                 <div class="single-person">
                                     <div class="col-md-10 col-md-offset-1 padding-leftright-null">
                                         <div class="text padding-topbottom-null text-center">
-                                            <img src="assets/img/author.jpg" alt="">
+                                            <img src="{{ url_for('static', filename='assets/img/author.jpg') }}" alt="Author">
                                             <h3 class="margin-bottom-small">About the author</h3>
                                             <h4 class="weight-300 grey">My name is Patrick David and I’m the UI/UX Designer<br>and the Head of Developer creative digital company, Patrick David.</h4>
                                         </div>
@@ -321,31 +321,44 @@
                             <div class="row no-margin padding-onlytop-lg">
                                 <div class="col-lg-12 padding-leftright-null">
                                     <div class="text-center">
-                                        <h3 class="margin-bottom-small white">Frequently Asked Questions</h3>
+                                        <h3 class="margin-bottom-small white">Pertanyaan yang Sering Diajukan</h3>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row no-margin">
+                                <!-- Kolom Kiri -->
                                 <div class="col-md-6 padding-leftright-null">
                                     <div class="text padding-bottom-null">
-                                        <p class="big grey-light weight-400">How does the money back guarantee work?
-                                        </p>
-                                        <p>Launch party monetization return on investment metrics startup hackathon validation focus release interaction design.</p>
-                                        <p class="margin-bottom-big">Seed money ecosystem pivot startup stealth success value proposition business plan equity entrepreneur seed round learning curve
-                                        </p>
-                                        <p class="big grey-light weight-400">What’s the ebook format?
-                                        </p>
-                                        <p class="margin-bottom-big">Gen-z niche market stock. Incubator responsive web design iteration entrepreneur. Bandwidth interaction design early adopters growth hacking strategy hackathon. Branding buyer monetization founders gamification leverage market vesting period partnership startup.
-                                        </p>
+
+                                    <p class="big grey-light weight-400">Bagaimana cara mengirim naskah?</p>
+                                    <p>Siapkan naskah dalam format <b>DOCX atau PDF</b>, sertakan <i>sinopsis singkat</i> dan biodata penulis.
+                                        Kirim melalui <a href="mailto:publisher@example.com">email</a> atau
+                                        <a target="_blank" href="https://wa.me/6281234567890?text=Halo%20Penerbit,%20saya%20ingin%20mengirim%20naskah">
+                                        WhatsApp</a>. Tim kami akan melakukan screening awal dan memberi balasan maksimal beberapa hari kerja.</p>
+                                    <p class="margin-bottom-big">Jika naskah lolos screening, kami akan memberi daftar kebutuhan berikutnya
+                                        (izin gambar, preferensi tata letak, dan pilihan paket layanan).</p>
+
+                                    <p class="big grey-light weight-400">Format file apa saja yang diterima?</p>
+                                    <p class="margin-bottom-big">Untuk naskah: <b>DOCX/PDF</b>. Untuk cover/ilustrasi: <b>JPG/PNG (300&nbsp;dpi)</b> atau
+                                        <b>PDF siap cetak</b>. Output e-book tersedia dalam <b>PDF</b> dan opsional <b>EPUB</b> jika diperlukan.</p>
+
                                     </div>
                                 </div>
+
+                                <!-- Kolom Kanan -->
                                 <div class="col-md-6 padding-leftright-null">
                                     <div class="text padding-bottom-null padding-md-top-null">
-                                        <p class="big grey-light weight-400">What payment options do you accept?
-                                        </p>
-                                        <p class="margin-bottom-big"> IPhone A/B testing crowdfunding launch party startup product management seed round partner network gen-z handshake accelerator.</p>
-                                        <p class="big grey-light weight-400">How do I get the ebook after I purchase it?</p>
-                                        <p class="margin-bottom-big">Prototype advisor startup incubator series A financing early adopters pivot supply chain responsive web design conversion investor buzz. Validation low hanging fruit influencer scrum project first mover advantage crowdsource venture ownership stealth user experience sales entrepreneur accelerator interaction design. </p>
+                                        <p class="big grey-light weight-400">Seperti apa alur penerbitannya?</p>
+                                        <p class="margin-bottom-big">Alur ringkas: <b>Screening</b> → <b>Editing</b> → <b>Layout</b> → <b>Proofread</b> →
+                                            <b>Final</b> → <b>Terbit</b>. Kami membantu pengurusan <b>ISBN</b> & barcode (jika dibutuhkan) dan mengirim
+                                            <i>proof</i> digital untuk disetujui sebelum rilis.</p>
+                                        <p class="big grey-light weight-400">Bagaimana cara memesan buku atau mendapatkan e-book?</p>
+                                        <p class="margin-bottom-big">Pemesanan dilakukan secara manual melalui
+                                            <a href="mailto:publisher@example.com">email</a> atau
+                                            <a target="_blank" href="https://wa.me/6281234567890?text=Halo%20Penerbit,%20saya%20ingin%20memesan%20buku/e-book">
+                                            WhatsApp</a>. Setelah konfirmasi, kami kirimkan detail dan tautan unduhan e-book / info pengiriman cetak.
+                                            Tidak ada sistem pembayaran otomatis di situs—semua difasilitasi langsung oleh tim kami.</p>
                                     </div>
                                 </div>
                             </div>
@@ -363,7 +376,7 @@
                 <!-- ======== Start Footer ======= -->
         <footer class="footer">
             <div class="container text-center text-white">
-                <img src="../HTML/assets/img/eksternal/logo_1.png" alt="">
+                <img src="{{ url_for('static', filename='assets/img/eksternal/logo_1.png') }}" alt="Logo">
                 <h2>Hak Cipta © 2025 PT. Panonpoe Digital Creative. Seluruh Hak Dilindungi.</h2>
             </div>
         </footer>
@@ -388,19 +401,19 @@
             </div>
         </footer> -->
         <!--  END Footer. Class fixed for fixed footer  -->
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="assets/js/jquery.min.js"></script>
-        <!-- All js library -->
-        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="assets/js/smooth.scroll.min.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
-        <script src="assets/js/jquery.scrolly.js"></script>
-        <script src="assets/js/plugins-scroll.js"></script>
-        <script src="assets/js/pace.min.js"></script>
-        <script src="assets/js/main.js"></script>
+    
+        <!-- jQuery (wajib sebelum plugin Bootstrap/JS lain) -->
+        <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <!-- Library lain -->
+        <script src="{{ url_for('static', filename='assets/js/bootstrap/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/jquery.scrollTo.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/smooth.scroll.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/jquery.appear.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/plugins-scroll.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/pace.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
     </body>
 </html>
