@@ -182,10 +182,14 @@ $(document).ready(function($) {
     /*-------------------------------------------------*/
     /* =  Scroll between sections
     /*-------------------------------------------------*/
-    $('a.btn-alt[href*=#], a.btn-pro[href*=#], a.anchor[href*=#], a.btn-down[href*=#] ').on("click",function(event) {
-        var $this = $(this);
-        var offset = -70;
-        $.scrollTo( $this.attr('href') , 850, { easing: 'swing' , offset: offset , 'axis':'y' } );
+    $('a[href^="#"]').on("click", function(event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
         event.preventDefault();
+        var headerHeight = $('header.fixed').outerHeight() || 0;
+        $('html, body').animate({
+            scrollTop: target.offset().top - headerHeight - 10
+        }, 850, 'swing');
+    }
     });
 });

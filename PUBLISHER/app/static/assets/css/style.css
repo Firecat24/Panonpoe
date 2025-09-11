@@ -56,6 +56,7 @@ table {
 
 a:focus {
   text-decoration: none; }
+  
 
 /*-------------------------------------------------*/
 /* =  2.General
@@ -404,7 +405,7 @@ p {
 
 .section-bordertop {
   border-top: 1px solid #f7f7f7; }
-
+  
 button {
   background: none;
   border: none;
@@ -4473,4 +4474,60 @@ button.mfp-close {
     margin: 20px 0 0;
     color: #fff;
     font-family: 'Rubik', sans-serif !important;
+}
+
+#home-header {
+    background: url("../img/eksternal/bg.jpg") no-repeat center center;
+    background-size: cover;       /* supaya full cover */
+    background-attachment: fixed; /* opsional: efek parallax */
+    color: #fff;                  /* teks putih biar kontras */
+    position: relative;
+    z-index: 1;
+}
+
+/* opsional: kasih overlay gelap biar teks lebih jelas */
+#home-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5); /* gelap transparan */
+    z-index: -1;
+}
+
+.text-box {
+    background: rgba(0, 0, 0, 0.6); /* hitam transparan */
+    padding: 20px 25px;
+    border-radius: 8px;
+    display: inline-block; /* supaya kotak cuma selebar teks */
+}
+
+.text-box h1,
+.text-box h2,
+.text-box p,
+.text-box li {
+    color: #fff; /* teks putih */
+}
+
+#home-header,
+#home-header h1,
+#home-header h2,
+#home-header p,
+#home-header li {
+    color: #fff; /* putih supaya jelas di atas background */
+}
+
+#home-header h1 {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#home-header h2 {
+    color: #00c8ff; /* biru aksen agar tetap beda */
+}
+
+#home-header ul.styled li {
+    color: #fff;
 }
