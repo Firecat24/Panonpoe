@@ -4477,7 +4477,7 @@ button.mfp-close {
 }
 
 #home-header {
-    background: url("../img/eksternal/bg.jpg") no-repeat center center;
+    background: url("../img/eksternal/bg.webp") no-repeat center center;
     background-size: cover;       /* supaya full cover */
     background-attachment: fixed; /* opsional: efek parallax */
     color: #fff;                  /* teks putih biar kontras */
