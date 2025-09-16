@@ -1,0 +1,587 @@
+/*================ Normal desktop :992px.==================== */
+@media (min-width: 1282px) and (max-width: 1700px) {
+
+	.contact-area:before {
+	    width: 34%;
+	}
+	.bike-hero {
+	    width: 100%;
+	    height: 100%;
+	    right: 0;
+	}
+	.board-hero-area, .board-features-area {
+	    background-size: 55%;
+	}
+}
+
+/*================= Hi-res laptops and desktops================= */
+@media (min-width: 1170px) and (max-width: 1281px) {	
+	.contact-area:before {
+	    width: 33%;
+	}
+	.bike-hero {
+	    width: 100%;
+    	height: 89%;
+    	right: -30px;
+	}
+	.board-hero-area, .board-features-area {
+	    background-size: 55%;
+	}
+	.board-gallery-area {
+	    background-size: 60%;
+	}
+}
+
+/*================ Normal desktop :992px.==================== */
+@media (min-width: 992px) and (max-width: 1169px) {
+
+	.contact-area:before {
+	    width: 100%;
+	}
+	.bike-hero {
+	    width: 80%;
+	    height: 75%;
+	}
+	.features-img {
+	    background-position: 138px 135px;
+	}
+	.features-img:before {
+	    left: 50px;
+	    width: 85%;
+	}
+	.bike-welcome, .price-bike:after {
+	    background-image: none;
+	}
+	.testimonial-img {
+	    height: 380px;
+	}
+	.widget.social ul li a {
+	    padding: 5px 10px;
+	}
+	/*Hover board*/
+	.hoverboard .bizes-nav ul.menu > li > a:last-child {
+	    padding-right: 10px;
+	}
+	.board-hero-area {
+	    background-size: 55%;
+	}
+	.board-features-area {
+		background-size: 60%;
+	}
+	.board-gallery-area {
+	    background-size: 65%;
+	    margin-bottom: -60px;
+	}
+	.board-gallery-content {
+	    transform: none;
+	    top: 20px;
+	}
+	.board-hero-bg {
+	    height: 700px;
+	}
+	/*Live cam*/
+	.cam-spe-img {
+	    top: 280px;
+	}
+	/*App*/
+	.screenshot-area .screenshot-wrap:after {
+		content: none;
+	}
+	.app-hero-area:after {
+	    top: 120px;
+	    right: -130px;
+	    height: 100%;
+	    background-size: 80%;
+	}
+	.app-hero-area:before {
+	    z-index: 2;
+	    background-size: 60%;
+	}
+	.app-welcome-img {
+	    right: 0;
+	}
+	.app-welcome-content {
+	    width: 100%;
+	}
+	a.app-btn {
+	    margin-right: 15px;
+	    width: 210px;
+	}
+	/*Headphone*/
+	.music-features-pro {
+	    left: 0;
+	}
+}
+/*================ Tablet desktop :768px.==================*/
+@media (min-width: 768px) and (max-width: 991px) {	
+	.contact-area:before {
+	    width: 100%;
+	}
+	.hero-area, .quality-area {
+	    background-size: contain;
+	}
+	.hero-content-area {
+	    margin-top: 40px;
+	    background-color: rgba(255, 255, 255, 0.5);
+	}
+	ul.drone-dots-lists li:nth-child(1) {
+	    left: 13%;
+	    top: 19%;
+	}
+	ul.drone-dots-lists li:nth-child(2) {
+	    left: 28%;
+	    top: 41%;
+	}
+	ul.drone-dots-lists li:nth-child(3) {
+	    left: 50%;
+	    top: 13%;
+	}
+	ul.drone-dots-lists li:nth-child(4) {
+    	top: 28%;
+ }
+	ul.drone-dots-lists li:nth-child(5) {
+	    left: 49%;
+	    top: 43%;
+	}
+	ul.drone-dots-lists li:nth-child(6) {
+	    left: 67%;
+	}
+	.single-drone-testimonial {  
+	    padding: 33px 30px;
+	}
+	/*Bike*/
+	.bike-hero {
+	    width: 100%;
+	    height: 55%;
+	    right: -3px;
+	    top: 34px;
+	}
+
+	.bike-order-btn a.btn-order {
+	    padding: 15px 20px;
+	    border-radius: 5px;
+	}
+	.features-img:before {
+	    left: 0;
+	    width: 90%;
+	    height: 87%;
+	}
+	.bike-welcome-area {
+	    padding-top: 0;
+	}
+	.bike-welcome {
+	    background-image: none;
+	    margin-top: 222px;
+	}
+
+	.price-bike:after {
+	    background-image: none;
+	}
+	.price-plan-area {
+	    padding-top: 80px;
+	}
+	.price-plan-area .bike-section-title {
+	    padding-bottom: 40px;
+	}
+	.bike-testimonial-area .bike-section-title {
+	    padding-top: 40px;
+	}
+	.testimonial-img {
+	    height: 280px;
+	}
+	.widget.social ul li a {
+	    padding: 5px 10px;
+	}
+	/*Hover Board*/
+	.board-hero-area {
+	    background-size: 60%;
+	}
+	.board-hero-content h1, .board-tab-content h1 {
+	    font-size: 36px;
+	    line-height: 50px;
+	}
+	.board-hero-bg {
+	    height: 730px;
+
+	}
+	.get-started-content h2, .board-features-content h2, .board-gallery-content h1 {
+	    font-size: 32px;
+	    line-height: 43px;
+	}
+	.board-features-content, .board-gallery-content {
+	    background-color: rgba(255, 255, 255, 0.7);
+	    padding: 20px;
+	}
+	.board-cell-content {
+	    width: 100%;
+	}
+	.board-sell-area {
+	    height: 600px;
+	}
+	/*Live cam */
+	.cam-hero-content h1 {
+		font-size: 40px;
+		line-height: 44px;
+		margin-bottom: 20px;
+	}
+	.cam-spe-img {
+	    top: 320px;
+	}
+	.cam-view-area {
+	    height: 640px;
+	}
+	form.cam-subscribe-form input {
+	    width: calc(100% - 400px);
+	}
+	/*App*/
+	.screenshot-area .owl-controls .owl-nav button,
+	.screenshot-area .screenshot-wrap:after {
+		display: none !important;
+	}
+	.app-hero-area:before {
+	    background-size: 64%;
+	}
+	.app-hero-content {
+	    padding: 0 10px;
+	}
+	.app-hero-area:after {
+	    top: 0;
+	    right: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-size: 60%;
+	}
+	.app-welcome-img {
+	    right: 0;
+	    top: 130px;
+	}
+	.app-price-btn a {
+	    width: 150px;
+	}
+	.app-pricing-wrap {
+	    padding: 40px 15px;
+	}
+	.order-one-music {
+		order: 2;
+	}
+	.order-two-music {
+		order: 1;
+	}
+	a.hero-signup {
+	    float: right;
+	}
+	/*Watch*/
+	.watch-price-footer ul li {
+	    margin: auto;
+	    font-size: 14px;
+	}
+
+}
+/*================== small mobile :320px. ===================*/
+@media (max-width: 767px) {		
+	
+	.contact-area:before {
+	    width: 100%;
+	}
+	.quality-area, .hero-area {
+	    background-size: contain;
+	}
+	.hero-area {
+		height: 260px;
+	}
+	.hero-content-area {
+	    margin-top: 40px;
+	    background-color: rgba(255, 255, 255, 0.5);
+	    padding: 0 20px;
+	}
+	.quality-area {
+	    height: 335px;
+	}
+	.hero-content-area h1, .bike-hero-content h1,
+	.watch-hero-content h1 {
+	    font-size: 30px;
+	    line-height: 36px;
+	}
+	.single-promo.pro-border {
+	    border-left: none;
+	    padding-left: 0;
+	}
+	.single-promo {
+	    text-align: center;
+	}
+	.single-drone-testimonial {
+	    padding: 33px 15px;
+	}
+	.drone-testimonial-wrap .owl-nav button, .dots-img {
+		display: none;
+	}
+	/*Bike*/
+	.bike-order-btn a.btn-order {
+	    padding: 15px 30px;
+	}
+	.bike-hero-content {
+	    margin-bottom: 100px;
+	}
+	.bike-hero {
+	    width: 100%;
+	    height: 100%;
+	    right: 0;
+	}
+	.bike-hero:before {
+	    top: -8px;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+	.features-img:before {
+	    left: 15px;
+	    width: 90%;
+	    height: 90%;
+	}
+	.order-one {
+		order: 2;
+	}
+	.order-two {
+		order: 1;
+	}
+	.features-area {
+	    padding-top: 50px;
+	}
+	.bike-welcome-area {
+	    padding-top: 40px;
+	}
+	.bike-welcome {
+	    background-image: none;
+	    margin-top: 50px;
+	}
+	.speci-features-wrap {
+	    margin-top: 40px;
+	}
+	.specifiation-area .bike-section-title {
+	    margin-bottom: 50px;
+	}
+	.price-plan-area {
+	    padding-top: 55px;
+	}
+	.price-plan-area .bike-section-title {
+	    padding-bottom: 50px;
+	}
+	.price-bike:after {
+	    background-image: none;
+	}
+	.bike-testimonial-area {
+	    padding-top: 0;
+	}
+	.bike-testimonial-area .bike-section-title {
+	    padding-top: 100px;
+	}
+	.testimonial-img {
+	    height: 360px;
+	    width: 96.5%;
+	}
+	.bike-testimonial-carousle {
+	    margin-top: 30px;
+	}
+	.price-bike-content p {
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	}
+	.widget.contact a {
+	    margin-right: 15px;
+	}
+	/*Hover Board*/
+	.board-hero-content {
+	    position: absolute;
+	    top: 190px;
+	    background-color: rgba(255, 255, 255, 0.5);
+	    padding: 20px;
+	    z-index: 2;
+	}
+	.board-hero-bg {
+	    background: transparent;
+	    height: 700px;
+	}
+	.board-hero-content h1, .board-cell-content h1, .board-tab-content h1, .cam-hero-content h1,
+	.app-hero-content h1,
+	.music-hero-content h1 {
+	    font-size: 40px;
+	    line-height: 54px;
+	}
+	.get-started-content{
+	    position: static;
+	    top: 50%;
+	    transform: none;
+	    padding-right: 20px;
+	}
+	.get-started-content h2, .board-features-content h2, .board-cell-content h2, .board-gallery-content h1,
+	.cam-about-content h2,
+	.cam-center-title h2,
+	.music-section-title h2 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.board-features-content {
+	    top: 0;
+	    background-color: rgba(255, 255, 255, 0.5);
+	    padding: 20px;
+	}
+	.board-cell-content {
+	    width: 100%;
+	}
+	.board-sell-area {
+	    height: 550px;
+	}
+	a.board-btn-cell {
+	    padding: 15px 45px;
+	}
+	.board-gallery-content {
+	    position: static;
+	    transform: none;
+	    background-color: rgba(255, 255, 255, 0.5);
+	    padding: 20px;
+	}
+	.widget.subscribe input.widget-input {
+	    width: calc(100% - 150px);
+	}
+	.widget.subscribe.board button.widget-sbtn {
+	    width: 130px;
+	}
+	/*live cam*/
+	.cam-hero-content {
+	    position: static;
+	    transform: none;
+	}
+	.cam-video {
+	    position: relative;
+	    height: 220px;
+	    width: 100%;
+	}
+	.cam-about-content {
+	    padding: 50px 0;
+	}
+	.cam-spe-img {
+	    position: static;
+	    width: 100%;
+	}
+	.cam-view-area {
+	    height: 570px;
+	}
+	.cam-view-content {
+	    padding: 40px 20px;
+	}
+	form.cam-subscribe-form input {
+	    width: calc(100% - 150px);
+	    margin-right: 10px;
+	}
+	button.widget-sbtn-cam {
+	    width: 130px;
+	}
+	/*App*/
+	.app-hero-area:before, .app-hero-area:after{
+	    background-image: none;
+	}
+	.app-hero-content {
+	    padding: 70px 30px;
+	}
+	.app-welcome-img {
+	    right: 0;
+	}
+	.first-app-area {
+	    padding-top: 15px;
+	}
+	.app-best-img {
+	    left: 0;
+	}
+	.screenshot-area .screenshot-wrap:after,
+	.screenshot-area .owl-controls .owl-nav button {
+	    display: none !important;
+	}
+	.app-section-title h2 {
+	    line-height: 38px;
+	}
+	.app-testi-content {
+	    position: inherit;
+	    left: 0;
+	    width: 100%;
+	    padding-right: 0;
+	    padding-bottom: 40px;
+	    top: 15px;
+	}
+	.app-testimonial-img {
+	    margin: auto;
+	    margin-top: 15px;
+	}
+	.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+		display: none !important;
+	}
+	form.app-subscribe-form input {
+	    width: 100%;
+	}
+	form.app-subscribe-form button {
+	    right: 5px;
+	    width: 130px;
+	}
+	/*Headphone*/
+	.music-hero-content {
+	    position: static;
+	    padding-top: 140px;
+	}
+	.music-hero-price span h1 {
+	    margin-bottom: 75px;
+	}
+	.music-header-area {
+	    height: 1180px;
+	}
+	.music-hero-product {
+	    padding-top: 20px;
+	}
+	.music-features-pro {
+	    left: 0;
+	    margin-bottom: 40px;
+	}
+	.music-feature-area {
+	    padding-top: 90px;
+	}
+	.music-buy-area {
+	    background-position: bottom;
+	    border-top-left-radius: 145px;
+	}
+	.music-subscribe-content-wrap {
+	    padding: 25px 0px;
+	    top: 85px;
+	}
+	form.music-subscribe-form input {
+	    width: calc(100% - 120px);
+	}
+	form.music-subscribe-form button {
+	    width: 110px;
+	    margin-left: 0;
+	}
+	/*Watch*/
+	.watch-pro-img img {
+	    max-width: 100%;
+	    margin-left: 0;
+	    margin-bottom: 40px;
+	}
+
+}
+/* ======================Large Mobile :480px.================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+	.testimonial-img {
+	    height: 455px;
+	    width: 100%;
+	}
+	.widget.social ul li a {
+	    padding: 5px 7px;
+	}
+	.widget.subscribe input.widget-input {
+    	width: calc(100% - 180px);
+	}
+	button.widget-sbtn {
+	    width: 140px;
+	}
+	.bike-footer-area .widget {
+	    padding-top: 50px;
+	}
+
+}
