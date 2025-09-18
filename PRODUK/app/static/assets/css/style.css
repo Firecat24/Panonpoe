@@ -672,7 +672,7 @@ a.meanmenu-reveal {
 /*=== 3. Hero Area ===*/
 
 .hero-area {
-    background-image: url(assets/img/drone.jpg);
+    background-image: url(../img/drone.jpg);
     background-repeat: no-repeat;
     height: 545px;
     background-position: 85% 55%;
@@ -832,7 +832,7 @@ form.subscribe-form button:hover {
 /*=== 5. Quality Area ===*/
 
 .quality-area {
-    background-image: url(assets/img/drone2.jpg);
+    background-image: url(../img/drone2.jpg);
     height: 665px;
     background-repeat: no-repeat;
     background-position: center top;
@@ -4443,7 +4443,7 @@ header.header-area.primary-header.absulate-header.scroll-header {
 /*=== Preview Css ===*/
 
 .preview-hero-area {
-    background-image: url(assets/img/prev/bg.png);
+    background-image: url(../img/prev/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
