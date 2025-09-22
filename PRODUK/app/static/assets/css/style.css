@@ -26,6 +26,7 @@
 /* Google Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Nunito+Sans:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Open+Sans:400,400i,600,600i,700,700i,800,800i|Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 /*======================================== 1. GLOBAL STYLES ==========================================*/
 
 /* === 1.1 Body === */
@@ -2578,7 +2579,7 @@ footer.board-footer-area {
 }
 
 .cam .bizes-nav ul.menu > li > a:hover {
-    color: #03d658;
+    color: #03b0d5;
 }
 
 /*=== Hero Area ===*/
@@ -2782,7 +2783,7 @@ button.widget-sbtn-cam:hover {
 }
 
 .cam-learn-more a {
-    color: #03d658;
+    color: #03b0d5;
     font-weight: 500;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -2972,7 +2973,7 @@ form.cam-subscribe-form input::placeholder {
 }
 
 button.widget-sbtn-cam {
-    background-color: #03d658;
+    background-color: #03b0d5;
     color: #ffffff;
     font-size: 20px;
     text-transform: capitalize;
@@ -4443,7 +4444,7 @@ header.header-area.primary-header.absulate-header.scroll-header {
 /*=== Preview Css ===*/
 
 .preview-hero-area {
-    background-image: url(../img/prev/bg.png);
+    background-image: url(../img/eksternal/bg_fix.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -4463,7 +4464,7 @@ header.header-area.primary-header.absulate-header.scroll-header {
 
 a.buy-btn {
     color: #eeeeee;
-    background: #03d658;
+    background: #03b0d5;
     width: 170px;
     height: 60px;
     text-align: center;
@@ -4610,11 +4611,23 @@ a.buy-btn {
 }
 
 a.btn-prev {
-    background-color: #03d658;
+    background-color: #03b0d5;
     color: #eeeeee;
     border-radius: 5px;
     padding: 20px 45px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 18px;
+}
+
+.footer {
+    background: #212529;
+    padding: 40px 0;
+}
+.footer h2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0 0;
+    color: #fff;
+    font-family: 'Rubik', sans-serif !important;
 }
