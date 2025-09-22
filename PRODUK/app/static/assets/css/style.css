@@ -4620,6 +4620,116 @@ a.btn-prev {
     font-size: 18px;
 }
 
+/* ===== FAQ Area Styling ===== */
+.faq-area {
+  background: #f9fafc; /* abu soft biar beda section */
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.faq-area h4 {
+  font-size: 1rem;
+  color: #4f46e5; /* aksen biru (indigo) */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.faq-area h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.faq-area h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+/* Accordion Cards */
+.faq-area .card {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.faq-area .card:hover {
+  transform: translateY(-2px);
+}
+
+.faq-area .card-header {
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.faq-area .card-header h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.faq-area .card-header a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  color: #111827;
+}
+
+.faq-area .card-header a.collapsed {
+  color: #374151;
+}
+
+.faq-area .card-body {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Transition Collapse */
+.collapse {
+  transition: height 0.35s ease;
+}
+
+.faq-area .faq-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;      /* gelap elegan */
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* garis tipis di bawah "FAQ" */
+.faq-area .faq-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4f46e5; /* indigo/aksen */
+  margin: 6px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* subtitle (Teleskop • Acrylic Dome • SiQiblat) */
+.faq-area .faq-subtitle {
+  font-size: 1rem;
+  color: #6b7280;      /* abu soft */
+  font-weight: 500;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+}
+
 .footer {
     background: #212529;
     padding: 40px 0;
