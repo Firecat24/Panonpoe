@@ -2570,6 +2570,9 @@ footer.board-footer-area {
 
 /*=== Header Area ===*/
 
+.cam .logo{
+    width: 30px;
+}
 .cam .bizes-nav ul.menu > li > a {
     font-weight: 400;
     color: #0e0e0e;

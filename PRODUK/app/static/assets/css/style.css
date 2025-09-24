@@ -4625,6 +4625,7 @@ a.btn-prev {
   background: #f9fafc; /* abu soft biar beda section */
   border-top: 2px solid #e5e7eb;
   border-bottom: 2px solid #e5e7eb;
+  padding: 50px 0 0 0;
 }
 
 .faq-area h4 {

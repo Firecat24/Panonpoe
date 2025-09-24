@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme-plugins.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style_teleskop.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/eksternal/logo_4.ico') }}">
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -49,10 +50,7 @@
                       </li>
                       <li><a href="#features">Features</a></li>
                       <li><a href="#spec">Specification</a></li>
-                      <li><a href="#reviews">Reviews</a></li>
                       <li><a href="#product">Product</a></li>
-                      <li><a href="#support">Support</a></li>
-                      <li><a href="#contact">Contact</a></li>
                     </ul>
                   </nav>                                                 
                 </div>
@@ -71,14 +69,14 @@
           <div class="row">
             <div class="col-md-6">
               <div class="cam-hero-img">
-                <img src="{{ url_for('static', filename='assets/img/livecam/cam1.png') }}" alt="">
+                <img src="{{ url_for('static', filename='assets/img/eksternal/teleskop.png') }}" alt="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="cam-hero-content">
-                <h1>The World's Favourite Camera.</h1>
-                <p>Student at Australian National University and the lead author of a paper published in Nature on Wednesday that may hold Jones and his colleagues developed </p>
-                <a href="#" class="cam-btn">Order now</a>
+                <h1>Teleskop Pintar Portabel</h1>
+                <p>Teleskop all-in-one yang memadukan optik, kamera, dan pelacakan otomatis—cukup pasang di tripod, pilih target, dan nikmati hasil observasi serta astrofoto dengan mudah.</p>
+                <a href="#product" class="cam-btn">Pesan sekarang</a>
               </div>
             </div>
           </div>
@@ -92,20 +90,22 @@
           <div class="row">
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInLeft">
-                <h4><a href="#">Well Planed UX Design</a></h4>
-                <p>Student at Australin National University and theof a paper published in Nature on Wednesdi anJones and his colleagues developed </p>
+                <h4><a href="#">Auto Align & GoTo Tracking</a></h4>
+                <p>Plate solving bawaan untuk penyelarasan otomatis; pilih target via aplikasi, teleskop mengarah & melacak sendiri.</p>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInUp">
-                <h4><a href="#">Easy to use your product</a></h4>
-                <p>Student at Australin National University and theof a paper published in Nature on Wednesdi anJones and his colleagues developed </p>
+                <h4><a href="#">Astrofoto Sekali Klik</a></h4>
+                <p>Live stacking, reduksi noise, dan kontrol kamera terintegrasi—hasil foto langsung tersimpan & siap dibagikan.</p>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInRight">
-                <h4><a href="#">24 hours customer service</a></h4>
-                <p>Student at Australin National University and theof a paper published in Nature on Wednesdi anJones and his colleagues developed </p>
+                <h4><a href="#">Ringkas & Siap Lapangan</a></h4>
+                <p>Unit all-in-one ringan dengan tripod; mode Matahari/Bulan/DSO, kendali penuh lewat aplikasi SeeStar di ponsel.</p>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@
       <!-- End Cam Service Area -->
 
       <!-- Start Cam About Video Area -->
-      <div class="cam-about-area">
+      {#<!-- <div class="cam-about-area">
         <div class="cam-video wow fadeInLeft">
           <a class="venobox vbox-item" data-gall="gall-video" data-autoplay="true" data-vbtype="video" href="https://vimeo.com/75976293"><i class="fa fa-play"></i></a>
         </div>
@@ -133,52 +133,52 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->#}
       <!-- End Cam About Video Area -->
 
       <!-- Start Cam Specification Area -->
       <div class="cam-specification-area" id="spec">
         <div class="cam-spe-img">
-          <img src="{{ url_for('static', filename='assets/img/livecam/cam3.jpg') }}" alt="">
+          <img src="{{ url_for('static', filename='assets/img/eksternal/teleskop2.png') }}" alt="">
         </div>
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="cam-spec-title">
-                <h2>Specification</h2>
+                <h2>Spesifikasi</h2>
               </div>
               <div class="cam-single-spec-content wow fadeInLeft">
                 <div class="spec-img">
-                  <img src="{{ url_for('static', filename='assets/img/livecam/camera.png') }}" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/eksternal/focus.png') }}" alt="">
                 </div>
                 <div class="spec-content">
-                  <h4>Camera(360˚ Dual Lens)</h4>
-                  <p>Video - up to 4096x2048 (24fps)</p>
-                  <p>Still - up to 15M (5472x2736)</p>
+                  <h4>Optik & Fokus</h4>
+                  <p class="mb-1">Aperture ±50 mm, fokus otomatis.</p>
+                  <p class="mb-0">Mode Bulan/DSO (Solar dengan filter).</p>
                 </div>
               </div>
               <div class="cam-single-spec-content wow fadeInUp">
                 <div class="spec-img">
-                  <img src="{{ url_for('static', filename='assets/img/livecam/os.png') }}" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/eksternal/imaging.png') }}" alt="">
                 </div>
                 <div class="spec-content">
-                  <h4>Camera(360˚ Dual Lens)</h4>
-                  <p>Video - up to 4096x2048 (24fps)</p>
-                  <p>Still - up to 15M (5472x2736)</p>
+                  <h4>Sensor & Imaging</h4>
+                  <p class="mb-1">CMOS warna terintegrasi.</p>
+                  <p class="mb-0">Live stacking & reduksi noise.</p>
                 </div>
               </div>
               <div class="cam-single-spec-content wow fadeInRight">
                 <div class="spec-img">
-                  <img src="{{ url_for('static', filename='assets/img/livecam/recoder.png') }}" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/eksternal/control.png') }}" alt="">
                 </div>
                 <div class="spec-content">
-                  <h4>Camera(360˚ Dual Lens)</h4>
-                  <p>Video - up to 4096x2048 (24fps)</p>
-                  <p>Still - up to 15M (5472x2736)</p>
+                  <h4>Pelacakan & Kontrol</h4>
+                  <p class="mb-1">Alt-az bermotor; GoTo + plate solving.</p>
+                  <p class="mb-0">Kendali via app (Wi-Fi/Bluetooth).</p>
                 </div>
               </div>
               <div class="cam-learn-more">
-                <a href="#">Learn more</a>
+                <a href="https://wa.me/6282333693379">Tanyakan Detail lengkapnya</a>
               </div>
             </div>
             <div class="col-col-md-6"></div>
@@ -200,23 +200,23 @@
           <div class="row">
             <div class="col-md-4">
               <div class="single-cam-product wow fadeInLeft">
-                <img src="{{ url_for('static', filename='assets/img/livecam/procam1.png') }}" alt="">
-                <h5>Samsung Gear 360 4K Spherical</h5>
-                <a href="#" class="cam-btn">Buy now</a>
+                <img src="{{ url_for('static', filename='assets/img/eksternal/p1.png') }}" alt="">
+                <h5>ZWO SeeStar S50</h5>
+                <a href="https://tk.tokopedia.com/ZSDXNX5Ag/" class="cam-btn">Buy now</a>
               </div>
             </div>
-            <div class="col-md-4">
+            {#<!-- <div class="col-md-4">
               <div class="single-cam-product wow fadeInUp active">
                 <img src="{{ url_for('static', filename='assets/img/livecam/procam2.png') }}" alt="">
                 <h5>Samsung Gear 360 4K Spherical</h5>
                 <a href="#" class="cam-btn">Buy now</a>
               </div>
-            </div>
+            </div> -->#}
             <div class="col-md-4">
               <div class="single-cam-product wow fadeInRight">
-                <img src="{{ url_for('static', filename='assets/img/livecam/procam3.png') }}" alt="">
-                <h5>Samsung Gear 360 4K Spherical</h5>
-                <a href="#" class="cam-btn">Buy now</a>
+                <img src="{{ url_for('static', filename='assets/img/eksternal/p2.png') }}" alt="">
+                <h5>ZWO SeeStar S30</h5>
+                <a href="https://tk.tokopedia.com/ZSDXNPNws/" class="cam-btn">Buy now</a>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@
       </div>
       <!-- End Cam Product Area -->
 
-      <!-- Start cam View Area -->
+      {#<!-- Start cam View Area
       <div class="cam-view-area" id="reviews">
         <div class="container">
           <div class="row">
@@ -239,10 +239,6 @@
           </div>
         </div>
       </div>
-      <!-- End cam View Area -->
-
-      <!-- Start Cam Testimonial Area -->
-      <div class="cam-testimonial-area">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -320,14 +316,12 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- /.cam-testimonial-wrap -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- End Cam Testimonial Area -->
 
-      <!-- Start Cam Subscribe Area -->
       <div class="cam-subscribe-area" id="support">
         <div class="container">
           <div class="row">
@@ -347,69 +341,14 @@
           </div>
         </div>
       </div>
-      <!-- End Cam Subscribe Area -->
+      End Cam Subscribe Area -->#}
 
-      <!-- Start Cam Footer Area -->
-      <footer class="cam-footer-area wow fadeInUp" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-4">
-              <div class="widget social cam">
-                <a href="{{ url_for('main_teleskop.teleskop') }}">
-                  <img src="{{ url_for('static', filename='assets/img/livecam/logo.png') }}" alt="">
-                </a>
-                <div class="cam-social">
-                  <h5>Social media</h5>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
+        <footer class="footer">
+            <div class="container text-center text-white">
+                <img src="{{ url_for('static', filename='assets/img/eksternal/logo_1.png') }}" alt="Logo">
+                <h2>Hak Cipta © 2025 PT. Panonpoe Digital Creative. Seluruh Hak Dilindungi.</h2>
             </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="widget cam-links">
-                <h4 class="cam-widget-title">Useful links</h4>
-                <ul>
-                  <li><a href="#">Payment options</a></li>
-                  <li><a href="#">Customer support</a></li>
-                  <li><a href="#">Order tracking</a></li>
-                  <li><a href="#">Delivery & returns</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="widget contact cam">
-                <h4 class="cam-widget-title">Contact us</h4>
-                <a href="tel:"><span><i class="fa fa-phone"></i></span>(470) 151-2367</a>
-                <a href="mailto:"><span><i class="fa fa-envelope"></i></span>lavina.oreilly@yahoo.com</a>
-                <a href="#"><span><i class="fa fa-home"></i></span>4504 Wilkinson Harbors, New Lauretta, VA 39768</a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="cam-copy">
-                <p>Design by @copyCrazycafe all right reserved</p>
-              </div>
-            </div>
-            <div class="col-md-7">
-              <div class="cam-footer-menu text-right">
-                <ul>
-                  <li><a href="#">FAQ</a></li>                    
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Terms and conditions</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- End Cam Footer Area -->
-    </div>
-    <!-- End Wrapper -->
+        </footer>
 
     <!-- all js here -->
     <script src="{{ url_for('static', filename='assets/js/vendor/jquery-2.2.1.min.js') }}"></script>
