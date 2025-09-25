@@ -2596,7 +2596,10 @@ footer.board-footer-area {
     padding-left: 95px;
     margin-bottom: 40px;
 }
-
+.cam-hero-img img {
+    border: 1px transparent;
+    border-radius: 15px;
+}
 .cam-hero-content {
     position: absolute;
     top: 50%;

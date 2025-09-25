@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme-plugins.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style_akrilikdome.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/eksternal/logo_4.ico') }}">
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -32,8 +33,8 @@
             <div class="row">
               <div class="col-4 col-sm-2 col-md-2">
                 <div class="logo">
-                  <a href="{{ url_for('main_dashboard.index') }}">
-                    <img src="{{ url_for('static', filename='assets/img/headphone/logo.png') }}" alt="Music studio">
+                  <a href="{{ url_for('main_akrilikdome.akrilikdome') }}">
+                    <img src="{{ url_for('static', filename='assets/img/headphone/logo.png') }}" alt="Logo">
                   </a>
                 </div>
               </div>
@@ -45,15 +46,13 @@
                       <li class="has-dropdown"><a href="javascript:void(0)">Layouts</a>
                         <ul>
                           <!-- Dropdown Items -->
-                          <li><a href="{{ url_for('main_teleskop.teleskop') }}">teleskop</a></li>
-                          <li><a href="{{ url_for('main_siqiblat.siqiblat') }}">siqiblat</a></li>
+                          <li><a href="{{ url_for('main_teleskop.teleskop') }}">Teleskop</a></li>
+                          <li><a href="{{ url_for('main_siqiblat.siqiblat') }}">Siqiblat</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Features</a></li>
-                      <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Price</a></li>
-                      <li><a href="#">Review</a></li>
-                      <li><a href="#">Support</a></li>
+                      <li><a href="#feathures">Features</a></li>
+                      <li><a href="#gallery">Gallery</a></li>
+                      <li><a href="#custom">Custom</a></li>
                     </ul>
                   </nav>      
                 </div>
@@ -75,11 +74,15 @@
           <div class="row">
             <div class="col-md-7">
               <div class="music-hero-content">
-                <h1>MXH-BT800 Bluetooth Wireless Headphones</h1>
-                <p>Pound oculus a lens that will give the impression of gossiping seeing the fish from the bottom.</p>
+                <h1>Dome Akrilik</h1>
+                <p>Dome akrilik bening yang membuat setup kamu terlihat profesional sambil melindungi perangkat dari debu & sentuhan. Permukaan jernih menjaga kualitas visual, bentuk hemisfer memberi sudut pandang luas. Lihat ukuran, aksesori, dan inspirasi penggunaan di bawah.</p>
                 <div class="music-hero-price">
-                  <h1 class="music-price">$375</h1>
-                  <span><a class="music-btn" href="#">BUY NOW <i class="fa fa-shopping-cart"></i></a></span>
+                  <h1 class="music-price">Cek harga di Tokopedia</h1>
+                  <span>
+                    <a class="music-btn" href="https://www.tokopedia.com/panonpoestore/etalase/dome-akrilik" target="_blank" rel="noopener noreferrer">
+                      BELI DI TOKOPEDIA <i class="fa fa-shopping-cart"></i>
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -94,89 +97,111 @@
       <!-- End Hero Area -->
 
       <!-- Start Features Area -->
-      <div class="music-feature-area">
+      <div class="music-feature-area" id="feathures">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="music-section-title wow fadeInUp">
-                <h2>Outstanding Features</h2>
-                <p>Student at Australian National University and the lea published in Nature on Wednesday that may.</p>
+                <h2>Keunggulan Dome Akrilik</h2>
+                <p>Pilihan ukuran lengkap—bisa <b>custom</b> diameter, ketebalan, dan finishing sesuai kebutuhan proyek.</p>
               </div>
             </div>
           </div>
+
           <div class="row">
+            <!-- Gambar produk -->
             <div class="col-md-4">
               <div class="music-features-pro">
-                <img src="{{ url_for('static', filename='assets/img/headphone/headphone2.png') }}" alt="">
+                <!-- ganti src di bawah dengan fotomu -->
+                <img src="{{ url_for('static', filename='assets/img/headphone/headphone2.png') }}" alt="Dome Akrilik">
               </div>
             </div>
+
+            <!-- Kolom fitur 1 -->
             <div class="col-md-4">
               <div class="music-single-feature">
-                <h5>High sound quality</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Bening & Estetik</h5>
+                <p>Transparansi tinggi seperti kaca, cocok untuk kamera/sensor, display, atau instalasi seni.</p>
               </div>
               <div class="music-single-feature">
-                <h5>Battery backup</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Ringan tapi Kuat</h5>
+                <p>Material PMMA (acrylic) ringan, tahan cuaca, dan tidak mudah pecah.</p>
               </div>
               <div class="music-single-feature">
-                <h5>Classic design</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Finishing Rapi</h5>
+                <p>Opsi polishing tepi, protective film, dan permukaan halus siap pakai.</p>
               </div>
             </div>
+
+            <!-- Kolom fitur 2 -->
             <div class="col-md-4">
               <div class="music-single-feature">
-                <h5>Noise cancellation</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Custom Lengkap</h5>
+                <p>Diameter & ketebalan variatif, bisa tambah <em>flange/neck</em>, lubang baut, hatch, atau ventilasi.</p>
               </div>
               <div class="music-single-feature">
-                <h5>Wireless head phone</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Mudah Dipasang & Kedap</h5>
+                <p>Kompatibel dengan gasket/sealant yang sesuai akrilik untuk hasil dust-/water-resistant.*</p>
               </div>
               <div class="music-single-feature">
-                <h5>Removable cable</h5>
-                <p>Pound oculus a lens that will give the seeing the fish from the bottom.</p>
+                <h5>Multifungsi</h5>
+                <p>Enclosure kamera & sensor, etalase produk, dekorasi, observasi—serbaguna untuk indoor/outdoor.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- End Features Area -->
 
       <!-- Start Gallery Area -->
-      <div class="music-gallery-area">
+      <div class="music-gallery-area" id="gallery">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
               <div class="music-section-title wow fadeInUp">
-                <h2>Don’t miss your chance to see the most fascinating gallery</h2>
-                <p>Student at Australian National University and the leapublished in Nature on.</p>
+                <h2>Galeri Dome Akrilik</h2>
+                <p>Pilih ukuran sesuai kebutuhan—tersedia banyak variasi dan bisa custom.</p>
               </div>
             </div>
           </div>
         </div>
+
         <div class="music-gallery-wrap owl-carousel">
-          {% for img in ['gallery1.jpg','gallery2.jpg','gallery3.jpg','gallery1.jpg','gallery2.jpg','gallery3.jpg'] %}
-          <div class="single-music-gallery">
-            <img src="{{ url_for('static', filename='assets/img/headphone/' ~ img) }}" alt="">
-            <p>Monster DNA On-Ear Headphones</p>
-          </div>
+          {% for d in domes %}
+            <div class="single-music-gallery">
+              {% if d.url %}
+                <a href="{{ d.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ d.name }}">
+                  <img src="{{ url_for('static', filename=d.img) }}" alt="{{ d.name }}">
+                  <p>{{ d.name }}</p>
+                </a>
+              {% else %}
+                <img src="{{ url_for('static', filename=d.img) }}" alt="{{ d.name }}">
+                <p>{{ d.name }}</p>
+              {% endif %}
+            </div>
           {% endfor %}
         </div>
       </div>
       <!-- End Gallery Area -->
 
       <!-- Start Buy Area -->
-      <div class="music-buy-area text-center">
+      <div class="music-buy-area text-center" id="custom">
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2">
               <div class="music-buy-content">
-                <h1>buy maxell-BT800 headphone</h1>
-                <h2>$375</h2>
-                <p>Student at Australian National University and the lead author of a paper published developed a model that simulates what’s happening in our planet’s mantle, beneath the crust that we live on, offering a window.</p>
-                <a href="#" class="music-btn">BUY NOW <i class="fa fa-shopping-cart"></i></a>
-                <span>buy from Maxell.com &amp; amazon.com</span>
+                <h1>Tidak menemukan ukuranmu?</h1>
+                <p>Kami punya banyak variasi dan bisa <b>custom</b> diameter, ketebalan, serta finishing.</p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <a class="music-btn" target="_blank" rel="noopener" href="https://wa.me/6282333693379?text=Halo%20Panonpoe%2C%20saya%20ingin%20custom%20Dome%20Akrilik.%20Ukuran%20yang%20dibutuhkan%3A%20%5Bdiameter%5D%2C%20%5Bketebalan%5D."> Ajukan ukuran custom </a>
+                </div>
+
+                <small class="d-block mt-3">
+                  Atau pilih yang tersedia di
+                  <a href="https://www.tokopedia.com/panonpoestore/etalase/dome-akrilik" target="_blank" rel="noopener">Tokopedia</a>.
+                </small>
               </div>
             </div>
           </div>
@@ -184,7 +209,7 @@
       </div>
       <!-- End Buy Area -->
 
-      <!-- Start Testimonial Area -->
+      {#<!-- Start Subscribe Area
       <div class="music-testimonial-area">
         <div class="container">
           <div class="row">
@@ -229,9 +254,7 @@
           </div>
         </div>
       </div>
-      <!-- End Testimonial Area -->
 
-      <!-- Start Subscribe Area -->
       <div class="music-subscribe-area">
         <div class="container">
           <div class="row">
@@ -250,84 +273,14 @@
           </div>
         </div>
       </div>
-      <!-- End Subscribe Area -->
+      End Subscribe Area -->#}
 
-      <!-- Start Footer Area -->
-      <footer class="footer music-footer-area">
-        <div class="container">
-          <div class="row pb-100">
-            <div class="col-md-2">
-              <div class="widget music-footer-logo">
-                <a href="{{ url_for('main_akrilikdome.akrilikdome') }}">
-                  <img src="{{ url_for('static', filename='assets/img/headphone/footer-logo.png') }}" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="col-md-5 col-lg-2">
-              <div class="widget music-features">
-                <h4 class="widget-title">Features</h4>
-                <ul>
-                  <li><a href="#">Silicone ear tips</a></li>
-                  <li><a href="#">Woven cables</a></li>
-                  <li><a href="#">Remote & mic</a></li>
-                  <li><a href="#">Battery backup</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-5 col-lg-3">
-              <div class="widget music-pricing">
-                <h4 class="widget-title">Pricing</h4>
-                <ul>
-                  <li><a href="#">Standard package</a></li>
-                  <li><a href="#">Top package</a></li>
-                  <li><a href="#">Medium package</a></li>
-                </ul>
-              </div>	
-            </div>
-            <div class="col-md-5 offset-md-2 col-lg-3 offset-lg-0">
-              <div class="widget music-contact">
-                <h4 class="widget-title">Contact</h4>
-                <ul>
-                  <li><a href="#">517 - 548-4152</a></li>
-                  <li><a href="mailto:godfrey.von@gmail.com">godfrey.von@gmail.com</a></li>
-                  <li><a href="#">Vroeg in de Weiboulevard 93-52 3856 SC Abbenes</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-              <div class="widget music-social">
-                <h4 class="widget-title">Social media</h4>
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                </ul>
-              </div>
-            </div>
+      <footer class="footer">
+          <div class="container text-center text-white">
+              <img src="{{ url_for('static', filename='assets/img/eksternal/logo_1.png') }}" alt="Logo">
+              <h2>Hak Cipta © 2025 PT. Panonpoe Digital Creative. Seluruh Hak Dilindungi.</h2>
           </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="music-copy-right">
-                <p>Design by © Crazycafe all right reserved</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="music-footer-menu">
-                <ul>
-                  <li><a href="#">Terms and conditions</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </footer>
-      <!-- End Footer Area -->
-    </div>
-    <!-- End Wrapper -->
 
     <!-- JS -->
     <script src="{{ url_for('static', filename='assets/js/vendor/jquery-2.2.1.min.js') }}"></script>

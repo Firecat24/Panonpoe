@@ -1830,9 +1830,13 @@ a.hero-signup {
 .music-hero-product {
     padding-top: 140px;
 }
+.music-hero-product img {
+    border: 1px transparent;
+    border-radius: 15px;
+}
 
 .music-header-area {
-    background-image: url(assets/img/headphone/headershape.png);
+    background-image: url(../img/headphone/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1862,7 +1866,7 @@ a.hero-signup {
 }
 
 .music-hero-price h1.music-price {
-    font-size: 59px;
+    font-size: 20px;
     font-weight: 700;
     margin-right: 20px;
     margin-bottom: 55px;
@@ -1889,16 +1893,6 @@ a.music-btn {
 
 a.music-btn i {
     padding-left: 32px;
-}
-
-a.music-btn:after {
-    position: absolute;
-    top: 16px;
-    right: 63px;
-    width: 1px;
-    height: 20px;
-    background-color: #ffffff;
-    content: "";
 }
 
 /*=== Features Area ===*/
@@ -1956,6 +1950,21 @@ a.music-btn:after {
 
 /*=== Music Gallery Area ===*/
 
+.single-music-gallery a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.single-music-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.single-music-gallery p {
+  margin-top: .5rem;
+  font-weight: 600;
+}
+
 .music-gallery-area {
     padding-top: 92px;
     padding-bottom: 88px;
@@ -1972,10 +1981,10 @@ a.music-btn:after {
 /*=== Music Buy Area ===*/
 
 .music-buy-area {
-    background-image: url(assets/img/headphone/bg-shape.jpg);
+    background-image: url(../img/headphone/1bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 767px;
+    min-height: 547px;
 }
 
 .music-buy-content {
