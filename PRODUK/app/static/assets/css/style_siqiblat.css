@@ -3073,7 +3073,7 @@ h4.cam-widget-title {
 /*=== Hero area ===*/
 
 .watch-hero-area {
-    background-image: url(assets/img/watch/shape1.png);
+    background-image: url(../img/watch/shape11.png);
     background-repeat: no-repeat;
     height: 994px;
     position: relative;
@@ -3114,7 +3114,7 @@ h4.cam-widget-title {
 .watch-hero-content h1 {
     font-size: 50px;
     line-height: 60px;
-    color: #211c1c;
+    color: #ffffff;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
@@ -3124,7 +3124,7 @@ h4.cam-widget-title {
     font-family: 'Poppins', sans-serif;
     width: 80%;
     margin: auto;
-    color: #8b8787;
+    color: #d4d4d4;
     font-size: 16px;
 }
 
@@ -3138,7 +3138,7 @@ h4.cam-widget-title {
 
 .watch-hero-video span {
     font-family: 'Poppins', sans-serif;
-    color: #211c1c;
+    color: #ffffff;
     font-size: 16px;
 }
 
@@ -3348,6 +3348,11 @@ a.watch-cta-btn {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 85px;
+}
+.watch-single-img img{
+  border-radius:16px;
+  border:4px solid transparent;
+  transition:border-color .3s ease, box-shadow .3s ease;
 }
 
 .watch-spec-img {
