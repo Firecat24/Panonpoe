@@ -2590,6 +2590,22 @@ footer.board-footer-area {
 .cam-hero-area {
     padding-top: 50px;
     padding-bottom: 55px;
+    background: url("../img/eksternal/bg_teleskop.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* opsional: biar efek parallax */
+    position: relative;
+    z-index: 1;
+}
+
+.cam-hero-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* bisa atur tingkat gelapnya */
+    z-index: -1;
 }
 
 .cam-hero-img {
@@ -2624,30 +2640,66 @@ footer.board-footer-area {
     margin-bottom: 55px;
 }
 
+.cam-hero-content {
+    position: absolute;
+    top: 50%;
+    padding-right: 80px;
+    transform: translateY(-50%);
+    z-index: 2; /* biar teks selalu di atas background & overlay */
+}
+
+.cam-hero-content {
+    background: rgba(255, 255, 255, 0.8); /* putih transparan */
+    padding: 30px;
+    border-radius: 12px;
+    display: block; /* full 1 kolom */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* biar ada depth */
+
+    position: relative; /* reset dari absolute */
+    top: auto;
+    transform: none;
+    z-index: 2;
+}
+
+.cam-hero-area .row {
+    display: flex;
+    align-items: center; /* vertikal center */
+}
+
 a.cam-btn {
-    border-width: 3px;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(3, 214, 88);
-    box-shadow: 0px 8px 33.25px 1.75px rgba(0, 0, 0, 0.15);
-    border: 3px solid #ffffff;
-    border-radius: 30px;
-    font-size: 20px;
-    color: #ffffff;
+    display: inline-block;
+    background-color: #007bff;   /* hijau solid */
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
-    padding: 17px 55px;
+    padding: 14px 40px;
+    border-radius: 8px;          /* sudut agak tumpul, nggak terlalu bulat */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a.cam-btn:hover,
 button.widget-sbtn-cam:hover {
-    background: #fafafa;
-    border: 3px solid rgb(3, 214, 88);
-    color: #0e0e0e;
+    background-color: #02b74d;   /* hijau sedikit lebih gelap */
+    color: #fff;
+    transform: translateY(-2px); /* efek hover simple */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
+
+.cam-hero-content a.cam-btn {
+    display: block;
+    margin: 20px auto 0 auto; /* atas 20px, kanan auto, bawah 0, kiri auto */
+    width: fit-content;
+}
+
 
 /*=== Cam Service Area ===*/
 
 .cam-service-area {
-    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .cam-single-service {
@@ -2746,9 +2798,16 @@ button.widget-sbtn-cam:hover {
 .cam-spe-img {
     position: absolute;
     right: 0;
-    box-shadow: 0px 8px 64.6px 3.4px rgba(0, 0, 0, 0.2);
-    width: 50%;
     top: 120px;
+    max-width: 50%;
+}
+
+.cam-spe-img img {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .cam-spec-title h2 {
@@ -2794,6 +2853,26 @@ button.widget-sbtn-cam:hover {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     border-bottom: 1px solid;
+}
+
+.wa-btn {
+    background-color: #007BFF; /* biru Panonpoe */
+    color: #fff !important;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block; /* ubah dari inline-block ke block */
+    width: fit-content; /* agar lebarnya pas kontennya */
+    margin: 20px auto 0 auto; /* atas 20px, kiri & kanan auto → centering */
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.wa-btn:hover {
+    background-color: #0056b3; /* biru lebih gelap untuk hover */
+    color: #fff !important;
 }
 
 /*=== Cam Product Area ===*/

@@ -1,4 +1,3 @@
-{# templates/livecam.html #}
 <!doctype html>
 <html class="no-js" lang="zxx"> 
   <head>
@@ -32,7 +31,7 @@
             <div class="row">
               <div class="col-9 col-sm-2 col-md-2">
                 <div class="logo">
-                  <a href="{{ url_for('main_teleskop.teleskop') }}">
+                  <a href="#home-header">
                     <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" alt="Logo">
                   </a>
                 </div>
@@ -42,15 +41,9 @@
                 <div class="main-menu-wrap">
                   <nav class="bizes-nav">
                     <ul class="menu">
-                      <li class="has-dropdown"><a href="javascript:void(0)">Layouts</a>
-                        <ul>
-                          <li><a href="{{ url_for('main_akrilikdome.akrilikdome') }}">headphone</a></li>
-                          <li><a href="{{ url_for('main_siqiblat.siqiblat') }}">watch</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#features">Features</a></li>
-                      <li><a href="#spec">Specification</a></li>
-                      <li><a href="#product">Product</a></li>
+                      <li><a href="#features">Fitur</a></li>
+                      <li><a href="#spec">Spesifikasi</a></li>
+                      <li><a href="#product">Produk</a></li>
                     </ul>
                   </nav>                                                 
                 </div>
@@ -64,7 +57,7 @@
       <!-- End Header Area -->
 
       <!-- Start hero area -->
-      <div class="cam-hero-area">
+      <div id="home-header" class="cam-hero-area">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -74,9 +67,9 @@
             </div>
             <div class="col-md-6">
               <div class="cam-hero-content">
-                <h1>Teleskop Pintar Portabel</h1>
-                <p>Teleskop all-in-one yang memadukan optik, kamera, dan pelacakan otomatis—cukup pasang di tripod, pilih target, dan nikmati hasil observasi serta astrofoto dengan mudah.</p>
-                <a href="#product" class="cam-btn">Pesan sekarang</a>
+                <h1>Nikmati Langit Malam Tanpa Ribet</h1>
+                <p>Teleskop pintar portabel dengan kamera bawaan & tracking otomatis. Cocok untuk pemula maupun penggemar astrofotografi.</p>
+                <a href="#product" class="cam-btn">Cek Produk Sekarang</a>
               </div>
             </div>
           </div>
@@ -87,24 +80,32 @@
       <!-- Start Cam Service Area -->
       <div class="cam-service-area" id="features">
         <div class="container">
+          <!-- Section Heading -->
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="section-title">Fitur Unggulan</h2>
+              <p class="section-subtitle">Semua yang kamu butuhkan untuk eksplorasi langit malam</p>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInLeft">
-                <h4><a href="#">Auto Align & GoTo Tracking</a></h4>
+                <h4><a href="#">Cari Bintang Otomatis</a></h4>
                 <p>Plate solving bawaan untuk penyelarasan otomatis; pilih target via aplikasi, teleskop mengarah & melacak sendiri.</p>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInUp">
-                <h4><a href="#">Astrofoto Sekali Klik</a></h4>
+                <h4><a href="#">Astrofoto Instan</a></h4>
                 <p>Live stacking, reduksi noise, dan kontrol kamera terintegrasi—hasil foto langsung tersimpan & siap dibagikan.</p>
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="cam-single-service wow fadeInRight">
-                <h4><a href="#">Ringkas & Siap Lapangan</a></h4>
+                <h4><a href="#">Ringkas & Mudah Dibawa</a></h4>
                 <p>Unit all-in-one ringan dengan tripod; mode Matahari/Bulan/DSO, kendali penuh lewat aplikasi SeeStar di ponsel.</p>
               </div>
             </div>
@@ -112,29 +113,6 @@
         </div>
       </div>
       <!-- End Cam Service Area -->
-
-      <!-- Start Cam About Video Area -->
-      {#<!-- <div class="cam-about-area">
-        <div class="cam-video wow fadeInLeft">
-          <a class="venobox vbox-item" data-gall="gall-video" data-autoplay="true" data-vbtype="video" href="https://vimeo.com/75976293"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7"></div>
-            <div class="col-md-5">
-              <div class="cam-about-content wow fadeInRight">
-                <h2>Check video presentation to find out more about us</h2>
-                <p>Looking for these genetic signposts in sediment has become 
-                possible only in the last few years, with recent developments in 
-                technology, including rapid sequencing of DNA. Although DNA 
-                sticks to minerals and decayed.</p>
-                <p>Tracks along the Hawaiian-Emperor chain formed over the same hot spot in the Pacific Ocean — and why are their .</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->#}
-      <!-- End Cam About Video Area -->
 
       <!-- Start Cam Specification Area -->
       <div class="cam-specification-area" id="spec">
@@ -178,7 +156,11 @@
                 </div>
               </div>
               <div class="cam-learn-more">
-                <a href="https://wa.me/6282333693379">Tanyakan Detail lengkapnya</a>
+                <a href="https://wa.me/6282333693379"
+                class="wa-btn"
+                target="_blank"
+                rel="noopener">
+                Spesifikasi Lengkap</a>
               </div>
             </div>
             <div class="col-col-md-6"></div>
@@ -193,7 +175,7 @@
           <div class="row">
             <div class="col">
               <div class="cam-center-title">
-                <h2>Choose the product that <br> you really need!</h2>
+                <h2>Temukan pilihanmu!</h2>
               </div>
             </div>
           </div>
@@ -202,7 +184,7 @@
               <div class="single-cam-product wow fadeInLeft">
                 <img src="{{ url_for('static', filename='assets/img/eksternal/p1.png') }}" alt="">
                 <h5>ZWO SeeStar S50</h5>
-                <a href="https://tk.tokopedia.com/ZSDXNX5Ag/" class="cam-btn">Buy now</a>
+                <a href="https://tk.tokopedia.com/ZSDXNX5Ag/" class="cam-btn">Cek Ketersediaan</a>
               </div>
             </div>
             {#<!-- <div class="col-md-4">
@@ -216,132 +198,13 @@
               <div class="single-cam-product wow fadeInRight">
                 <img src="{{ url_for('static', filename='assets/img/eksternal/p2.png') }}" alt="">
                 <h5>ZWO SeeStar S30</h5>
-                <a href="https://tk.tokopedia.com/ZSDXNPNws/" class="cam-btn">Buy now</a>
+                <a href="https://tk.tokopedia.com/ZSDXNPNws/" class="cam-btn">Cek Ketersediaan</a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- End Cam Product Area -->
-
-      {#<!-- Start cam View Area
-      <div class="cam-view-area" id="reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <div class="cam-view-content">
-                <h4>360° views from Gear 360</h4>
-                <p>Especially significant in a state imperiled by rising sea Rick Scott, who has
-                 said he is unconvinced that  real and whose administration is widely
-                would be traveling at more than miles per hour as.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="cam-center-title">
-                <h2>We have received tons of <br>awesome testimonials</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="cam-testimonial-wrap owl-carousel wow fadeInUp">
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/livecam/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi1.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/livecam/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi2.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/livecam/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi3.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cam-subscribe-area" id="support">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="cam-center-title wow fadeInUp">
-                <h2>Subscribe to our newsletter <br>and get update</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <form action="#" method="post" class="cam-subscribe-form">
-                <input name="email" class="widget-input wow fadeInLeft" placeholder="Enter Your Email..." type="email">
-                <button type="submit" class="widget-sbtn-cam wow fadeInRight">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      End Cam Subscribe Area -->#}
 
       <footer class="footer">
           <div class="container text-center text-white">

@@ -240,18 +240,29 @@
 		 }
 
     	/*====  11. one page js active =====*/
-        $('.main-menu-wrap > .bizes-nav > ul.menu > li > a').on("click", function() {
-            //Toggle Class
-            $(".active").removeClass("active");
-            $(this).closest('li').addClass("active");
-            var theClass = $(this).attr("class");
-            $('.' + theClass).parent('li').addClass('active');
-            //Animate
-            $('html, body').stop().animate({
-                scrollTop: $($(this).attr('href')).offset().top - 100
-            }, 1000);
-            return false;
-        });
+		$('.main-menu-wrap > .bizes-nav > ul.menu > li > a').on("click", function() {
+			//Toggle Class
+			$(".active").removeClass("active");
+			$(this).closest('li').addClass("active");
+			var theClass = $(this).attr("class");
+			$('.' + theClass).parent('li').addClass('active');
+			//Animate
+			$('html, body').stop().animate({
+				scrollTop: $($(this).attr('href')).offset().top - 100
+			}, 1000);
+			return false;
+		});
+
+		// Tambahan khusus untuk logo
+		$('.logo a[href^="#"]').on("click", function(event) {
+			event.preventDefault();
+			var target = $(this).attr("href");
+			if ($(target).length) {
+				$('html, body').stop().animate({
+					scrollTop: $(target).offset().top - 100
+				}, 1000);
+			}
+		});
 
 
 		/* ==== 12. Venobox Active ==== */	
