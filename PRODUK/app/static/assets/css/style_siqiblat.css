@@ -388,7 +388,9 @@ img {
 /*Logo*/
 
 .logo img {
-    padding: 30px 0;
+    height: 80px;      /* sesuaikan tinggi sesuai kebutuhan */
+    width: auto;       /* lebar otomatis agar proporsional */
+    padding: 20px 0;   /* bisa tetap atau dikurangi sesuai layout */
     transition: 0.3s;
 }
 
@@ -3063,54 +3065,101 @@ h4.cam-widget-title {
 
 /*====== 15. Watch Landing page ======*/
 
+/* Navbar link */
 .watch .bizes-nav ul.menu > li > a {
-    color: #4acbd9;
-    font-size: 15px;
-    font-weight: 400;
+    color: #ffffff; /* putih agar kontras dengan background hero */
+    font-size: 16px; /* ukuran sedikit lebih besar untuk readability */
+    font-weight: 500; /* lebih tegas */
     font-family: 'Poppins', sans-serif;
+    padding: 8px 12px; /* beri ruang klik */
+    transition: color 0.3s ease; /* efek halus saat hover */
+    display: inline-block; /* memastikan padding bekerja konsisten */
+    padding-top: 20px;
+}
+
+/* Hover / fokus */
+.watch .bizes-nav ul.menu > li > a:hover,
+.watch .bizes-nav ul.menu > li > a:focus {
+    color: #11100f; /* warna aksen saat hover */
+    text-decoration: none; /* hilangkan underline */
+}
+
+/* Active / halaman saat ini */
+.watch .bizes-nav ul.menu > li.current-menu-item > a {
+    color: #11100f; /* highlight link aktif */
+    font-weight: 600; /* lebih tegas */
 }
 
 /*=== Hero area ===*/
-
+/* Default desktop */
 .watch-hero-area {
-    background-image: url(../img/watch/shape11.png);
+    background-image: url(../img/eksternal/bg_siqiblat.jpg);
     background-repeat: no-repeat;
-    height: 994px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* bisa disable di mobile nanti */
+    min-height: 600px;
     position: relative;
-    padding-top: 169px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    overflow: hidden;
 }
 
-.watch-hero-area:after,
-.watch-hero-area:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-repeat: no-repeat;
+/* Mobile & tablet */
+@media (max-width: 992px) {
+    .watch-hero-area {
+        background-attachment: scroll; /* nonaktifkan parallax untuk mobile */
+        min-height: 400px;             /* tinggi lebih pas untuk layar kecil */
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    .watch-hero-area:after,
+    .watch-hero-area:before {
+        background-size: contain;      /* scale shape dekoratif */
+        background-position: center;   /* pastikan tetap di tengah */
+    }
 }
+
+@media (max-width: 576px) {
+    .watch-hero-area {
+        min-height: 300px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+    .watch-hero-area:after,
+    .watch-hero-area:before {
+        display: none;                 /* hide shape di mobile biar lebih simple */
+    }
+}
+
 
 .watch-hero-area:after {
     background-image: url(assets/img/watch/shape2.png);
     background-position: center right;
     background-size: 70% 100%;
+    z-index: 1;
 }
 
 .watch-hero-area:before {
     background-image: url(assets/img/watch/shape3.png);
     background-position: center left;
-    z-index: -1;
+    background-size: auto 100%;
+    z-index: 1;
 }
 
+/* Konten hero */
 .watch-hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding-top: 68px;
+    padding: 30px 20px; /* beri ruang dan responsif */
     margin-bottom: 40px;
+    display: inline-block; /* background sesuai teks */
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparan untuk readability */
+    border-radius: 10px;
 }
 
+/* Judul hero */
 .watch-hero-content h1 {
     font-size: 50px;
     line-height: 60px;
@@ -3120,6 +3169,7 @@ h4.cam-widget-title {
     margin-bottom: 20px;
 }
 
+/* Deskripsi hero */
 .watch-hero-content p {
     font-family: 'Poppins', sans-serif;
     width: 80%;
@@ -3127,25 +3177,6 @@ h4.cam-widget-title {
     color: #d4d4d4;
     font-size: 16px;
 }
-
-.watch-hero-video a {
-    background-color: #60c24c;
-    color: #ffffff;
-    padding: 8px 13px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.watch-hero-video span {
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.watch-hero-video {
-    margin-top: 34px;
-}
-
 /*=== Watch Section Title ===*/
 
 .watch-section-title h4 {
@@ -3155,17 +3186,19 @@ h4.cam-widget-title {
     color: #202020;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
-    width: 200px;
+    margin-bottom: 10px; /* beri jarak ke h2 */
 }
 
 .watch-section-title h4:after {
-    position: absolute;
-    top: 15px;
-    right: 17px;
     content: "";
+    position: absolute;
+    left: 100%; /* mulai dari ujung teks */
+    top: 50%;    /* tengah vertikal h4 */
+    transform: translateY(-50%); /* center garis */
     width: 85px;
     height: 3px;
-    background-color: #60c24c;
+    background-color: #007bff;
+    margin-left: 10px; /* jarak antara teks dan garis */
 }
 
 .watch-section-title h2 {
@@ -3322,6 +3355,53 @@ a.watch-cta-btn {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     border-radius: 5px;
+}
+
+.btn-modern {
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Tombol utama */
+.btn-modern-primary {
+    background: linear-gradient(135deg, #099bf8, #007bff);
+    color: #fff;
+    border: none;
+}
+
+.btn-modern-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Tombol sekunder outline */
+.btn-modern-outline {
+    background: transparent;
+    color: #099bf8;
+    border: 2px solid #099bf8;
+}
+
+.btn-modern-outline:hover {
+    background: #099bf8;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsif */
+@media (max-width: 576px) {
+    .btn-modern {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /*=== Watch Specification area ===*/
@@ -4590,39 +4670,6 @@ a.buy-btn {
     font-size: 15px;
     letter-spacing: -1px;
     font-weight: 600;
-}
-
-.prev-freure-content {
-    padding-right: 30px;
-    padding-top: 30px;
-}
-
-.prev-power-area {
-    background-color: #f5f5f5;
-    padding: 100px 0;
-}
-
-.prev-power-area h2 {
-    font-size: 35px;
-    color: #2b2b2b;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.prev-power-area h3 {
-    color: #2b2b2b;
-    font-weight: 400;
-    margin-bottom: 40px;
-}
-
-a.btn-prev {
-    background-color: #03b0d5;
-    color: #eeeeee;
-    border-radius: 5px;
-    padding: 20px 45px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 18px;
 }
 
 .footer {

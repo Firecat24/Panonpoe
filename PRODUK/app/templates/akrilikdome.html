@@ -1,14 +1,13 @@
-{# templates/headphone.html #}
 <!doctype html>
-<html class="no-js" lang="zxx"> 
+<html class="no-js" lang="id"> 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="bizes is a multipurpose business template suitable for agency, business, consultant, corporate, creative, finance, portfolio, startup, trading or other business website">
-    <meta name="keywords" content="bizes, Bootstrap, Construction, finance, Real Estate, Corporate, Template ">
-    <meta name="author" content="Masud Rana">		
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Akrilik Dome</title>
+
+    <title>Dome Akrilik | Panonpoe Digital Creative</title>
+    <meta name="description" content="Dome akrilik bening untuk kamera, sensor, etalase, dan dekorasi. Ringan, kuat, estetik, tersedia berbagai ukuran dan bisa custom sesuai kebutuhan.">
+    <meta name="author" content="Panonpoe Digital Creative">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
@@ -18,92 +17,75 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/eksternal/logo_4.ico') }}">
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
     <!-- Start Wrapper -->
     <div class="wraper headphone">
-      <!-- Start Header Area -->
+      
+      <!-- Header -->
       <header class="header-area primary-header absulate-header">
         <div class="navigation-area">
           <div class="container">
             <div class="row">
               <div class="col-4 col-sm-2 col-md-2">
                 <div class="logo">
-                  <a href="{{ url_for('main_akrilikdome.akrilikdome') }}">
-                    <img src="{{ url_for('static', filename='assets/img/headphone/logo.png') }}" alt="Logo">
+                  <a href="#top" class="scroll-to-top">
+                    <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" alt="watch studio">
                   </a>
                 </div>
               </div>
               <div class="col-2 col-sm-2 col-lg-8 order-one order-one-music">
-                <!-- Start Bizes Nav -->
                 <div class="main-menu-wrap">
                   <nav class="bizes-nav">
-                    <ul class="menu">
-                      <li class="has-dropdown"><a href="javascript:void(0)">Layouts</a>
-                        <ul>
-                          <!-- Dropdown Items -->
-                          <li><a href="{{ url_for('main_teleskop.teleskop') }}">Teleskop</a></li>
-                          <li><a href="{{ url_for('main_siqiblat.siqiblat') }}">Siqiblat</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#feathures">Features</a></li>
-                      <li><a href="#gallery">Gallery</a></li>
+                    <ul class="menu"> 
+                      <li><a href="#feathures">Keunggulan</a></li>
+                      <li><a href="#gallery">Galeri</a></li>
                       <li><a href="#custom">Custom</a></li>
                     </ul>
                   </nav>      
                 </div>
-                <!-- End Bizes Nav -->
                 <div class="mobile-menu-area"></div>
               </div>
-              <div class="col-6 col-sm-6 col-lg-2 order-two order-two-music">
-                <a href="#" class="hero-signup">SIGN UP</a>
-              </div>		
             </div>
           </div>
         </div>
       </header>
-      <!-- End Header Area -->
+      <!-- End Header -->
 
-      <!-- Start Hero Area -->
-      <div class="music-header-area">
+      <!-- Hero -->
+      <div id="top" class="music-header-area">
         <div class="container">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-md-7">
               <div class="music-hero-content">
-                <h1>Dome Akrilik</h1>
-                <p>Dome akrilik bening yang membuat setup kamu terlihat profesional sambil melindungi perangkat dari debu & sentuhan. Permukaan jernih menjaga kualitas visual, bentuk hemisfer memberi sudut pandang luas. Lihat ukuran, aksesori, dan inspirasi penggunaan di bawah.</p>
-                <div class="music-hero-price">
-                  <h1 class="music-price">Cek harga di Tokopedia</h1>
+                <h1>Dome Akrilik Bening</h1>
+                <p>Dome akrilik transparan yang melindungi perangkat Anda dari debu dan sentuhan, sekaligus memberi tampilan profesional. Permukaan jernih menjaga kualitas visual, bentuk hemisfer memberi sudut pandang luas. Tersedia berbagai ukuran, aksesori, dan opsi custom.</p>
+                <div class="music-hero-price">  
+                  <h2 class="music-price"></h2>
                   <span>
-                    <a class="music-btn" href="https://www.tokopedia.com/panonpoestore/etalase/dome-akrilik" target="_blank" rel="noopener noreferrer">
+                    <a class="music-btn" href="https://www.tokopedia.com/panonpoestore/etalase/dome-akrilik" target="_blank" rel="noopener noreferrer" aria-label="Beli Dome Akrilik di Tokopedia">
                       BELI DI TOKOPEDIA <i class="fa fa-shopping-cart"></i>
                     </a>
                   </span>
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="music-hero-product float-right">
-                <img src="{{ url_for('static', filename='assets/img/headphone/headphone1.png') }}" alt="">
+              <div class="col-md-5 text-center">
+                <div class="music-hero-product">
+                  <img src="{{ url_for('static', filename='assets/img/headphone/headphone1.png') }}" alt="Contoh Dome Akrilik" class="img-fluid">
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
-      <!-- End Hero Area -->
+      <!-- End Hero -->
 
-      <!-- Start Features Area -->
+      <!-- Features -->
       <div class="music-feature-area" id="feathures">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="music-section-title wow fadeInUp">
                 <h2>Keunggulan Dome Akrilik</h2>
-                <p>Pilihan ukuran lengkap—bisa <b>custom</b> diameter, ketebalan, dan finishing sesuai kebutuhan proyek.</p>
+                <p>Kami menyediakan pilihan ukuran lengkap—bisa <b>custom</b> diameter, ketebalan, dan finishing sesuai kebutuhan proyek Anda.</p>
               </div>
             </div>
           </div>
@@ -112,8 +94,7 @@
             <!-- Gambar produk -->
             <div class="col-md-4">
               <div class="music-features-pro">
-                <!-- ganti src di bawah dengan fotomu -->
-                <img src="{{ url_for('static', filename='assets/img/headphone/headphone2.png') }}" alt="Dome Akrilik">
+                <img src="{{ url_for('static', filename='assets/img/headphone/headphone2.png') }}" alt="Detail produk Dome Akrilik" class="img-fluid">
               </div>
             </div>
 
@@ -121,15 +102,15 @@
             <div class="col-md-4">
               <div class="music-single-feature">
                 <h5>Bening & Estetik</h5>
-                <p>Transparansi tinggi seperti kaca, cocok untuk kamera/sensor, display, atau instalasi seni.</p>
+                <p>Transparansi tinggi seperti kaca—ideal untuk kamera, sensor, display, atau instalasi seni.</p>
               </div>
               <div class="music-single-feature">
-                <h5>Ringan tapi Kuat</h5>
-                <p>Material PMMA (acrylic) ringan, tahan cuaca, dan tidak mudah pecah.</p>
+                <h5>Ringan tapi Tahan Lama</h5>
+                <p>Terbuat dari akrilik (PMMA) yang ringan, tahan cuaca, dan tidak mudah pecah.</p>
               </div>
               <div class="music-single-feature">
                 <h5>Finishing Rapi</h5>
-                <p>Opsi polishing tepi, protective film, dan permukaan halus siap pakai.</p>
+                <p>Pilihan polishing tepi, protective film, dan permukaan halus siap pakai.</p>
               </div>
             </div>
 
@@ -137,31 +118,30 @@
             <div class="col-md-4">
               <div class="music-single-feature">
                 <h5>Custom Lengkap</h5>
-                <p>Diameter & ketebalan variatif, bisa tambah <em>flange/neck</em>, lubang baut, hatch, atau ventilasi.</p>
+                <p>Diameter & ketebalan variatif, bisa ditambah flange/neck, lubang baut, hatch, atau ventilasi.</p>
               </div>
               <div class="music-single-feature">
                 <h5>Mudah Dipasang & Kedap</h5>
-                <p>Kompatibel dengan gasket/sealant yang sesuai akrilik untuk hasil dust-/water-resistant.*</p>
+                <p>Dapat dipadukan dengan gasket atau sealant akrilik untuk hasil tahan debu & air.*</p>
               </div>
               <div class="music-single-feature">
                 <h5>Multifungsi</h5>
-                <p>Enclosure kamera & sensor, etalase produk, dekorasi, observasi—serbaguna untuk indoor/outdoor.</p>
+                <p>Cocok untuk enclosure kamera & sensor, etalase produk, dekorasi, hingga observasi indoor/outdoor.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- End Features -->
 
-      <!-- End Features Area -->
-
-      <!-- Start Gallery Area -->
+      <!-- Gallery -->
       <div class="music-gallery-area" id="gallery">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
               <div class="music-section-title wow fadeInUp">
                 <h2>Galeri Dome Akrilik</h2>
-                <p>Pilih ukuran sesuai kebutuhan—tersedia banyak variasi dan bisa custom.</p>
+                <p>Lihat berbagai ukuran yang tersedia atau pesan custom sesuai kebutuhan Anda.</p>
               </div>
             </div>
           </div>
@@ -172,34 +152,34 @@
             <div class="single-music-gallery">
               {% if d.url %}
                 <a href="{{ d.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ d.name }}">
-                  <img src="{{ url_for('static', filename=d.img) }}" alt="{{ d.name }}">
+                  <img src="{{ url_for('static', filename=d.img) }}" alt="Dome Akrilik {{ d.name }}">
                   <p>{{ d.name }}</p>
                 </a>
               {% else %}
-                <img src="{{ url_for('static', filename=d.img) }}" alt="{{ d.name }}">
+                <img src="{{ url_for('static', filename=d.img) }}" alt="Dome Akrilik {{ d.name }}">
                 <p>{{ d.name }}</p>
               {% endif %}
             </div>
           {% endfor %}
         </div>
       </div>
-      <!-- End Gallery Area -->
+      <!-- End Gallery -->
 
-      <!-- Start Buy Area -->
+      <!-- Custom Order -->
       <div class="music-buy-area text-center" id="custom">
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2">
               <div class="music-buy-content">
-                <h1>Tidak menemukan ukuranmu?</h1>
-                <p>Kami punya banyak variasi dan bisa <b>custom</b> diameter, ketebalan, serta finishing.</p>
-
+                <h2>Tidak menemukan ukuran yang pas?</h2>
+                <p>Kami siap membuat <b>custom</b> sesuai kebutuhan: diameter, ketebalan, maupun finishing.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
-                  <a class="music-btn" target="_blank" rel="noopener" href="https://wa.me/6282333693379?text=Halo%20Panonpoe%2C%20saya%20ingin%20custom%20Dome%20Akrilik.%20Ukuran%20yang%20dibutuhkan%3A%20%5Bdiameter%5D%2C%20%5Bketebalan%5D."> Ajukan ukuran custom </a>
+                  <a class="music-btn" target="_blank" rel="noopener" href="https://wa.me/6282333693379?text=Halo%20Panonpoe%2C%20saya%20ingin%20custom%20Dome%20Akrilik.%20Ukuran%20yang%20dibutuhkan%3A%20[diameter],%20[ketebalan]." aria-label="Ajukan custom Dome Akrilik via WhatsApp">
+                    Ajukan Custom via WhatsApp
+                  </a>
                 </div>
-
                 <small class="d-block mt-3">
-                  Atau pilih yang tersedia di
+                  Atau pilih produk yang tersedia di 
                   <a href="https://www.tokopedia.com/panonpoestore/etalase/dome-akrilik" target="_blank" rel="noopener">Tokopedia</a>.
                 </small>
               </div>
@@ -207,80 +187,19 @@
           </div>
         </div>
       </div>
-      <!-- End Buy Area -->
+      <!-- End Custom Order -->
 
-      {#<!-- Start Subscribe Area
-      <div class="music-testimonial-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="music-section-title">
-                <h2>Check what our client Says about us</h2>
-                <p>Student at Australian National University and the in Nature on.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="music-testimonial-wrap owl-carousel">
-                {% for author_pic in ['author1.png','author2.png','author1.png','author2.png'] %}
-                <div class="music-single-testimonial">
-                  <div class="music-testi-content">
-                    <div class="quote-img">
-                      <img src="{{ url_for('static', filename='assets/img/headphone/quote.png') }}" alt="">
-                    </div>
-                    <p>Chemical compositions that eventually made their way the surface in a hot mantle plume, or upwelling as the core heated the rock into magma.</p>
-                    <ul>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                    </ul>
-                  </div>
-                  <div class="music-author-info">
-                    <div class="authot-pic">
-                      <img src="{{ url_for('static', filename='assets/img/headphone/' ~ author_pic) }}" alt="">
-                    </div>
-                    <div class="author-info">
-                      <h5>Rasel ahmed</h5>
-                      <p>WP Developer</p>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="music-subscribe-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="music-subscribe-content-wrap">
-                <div class="music-subscribe-content">
-                  <h1>Subscribe for more informations</h1>
-                  <p>Student at Australian National University and the in Nature on.</p>
-                  <form action="#" method="post" class="music-subscribe-form">
-                    <input name="email" class="widget-input" placeholder="Enter Your Email..." type="email">
-                    <button type="submit" class="widget-sbtn-music">SUBSCRIBE</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      End Subscribe Area -->#}
-
+      <!-- Footer -->
       <footer class="footer">
-          <div class="container text-center text-white">
-              <img src="{{ url_for('static', filename='assets/img/eksternal/logo_1.png') }}" alt="Logo">
-              <h2>Hak Cipta © 2025 PT. Panonpoe Digital Creative. Seluruh Hak Dilindungi.</h2>
-          </div>
+        <div class="container text-center text-white">
+          <img src="{{ url_for('static', filename='assets/img/eksternal/logo_1.png') }}" alt="Logo Panonpoe">
+          <h2>Hak Cipta © 2025 PT. Panonpoe Digital Creative. Seluruh Hak Dilindungi.</h2>
+        </div>
       </footer>
+      <!-- End Footer -->
+
+    </div>
+    <!-- End Wrapper -->
 
     <!-- JS -->
     <script src="{{ url_for('static', filename='assets/js/vendor/jquery-2.2.1.min.js') }}"></script>

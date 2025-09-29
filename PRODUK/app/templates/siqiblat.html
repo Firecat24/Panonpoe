@@ -1,12 +1,9 @@
-{# templates/watch.html #}
+
 <!doctype html>
 <html class="no-js" lang="zxx"> 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="bizes is a multipurpose buisness template suitable for agency, business, consultant, corporate, creative, finance, portfolio, startup, trading  or any other business website">
-    <meta name="keywords" content="bizes, Bootstrap, Construction, finance, Real Estate, Corporate, Template ">
-    <meta name="author" content="Masud Rana">		
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SiQiblat</title>
 
@@ -32,8 +29,8 @@
             <div class="row">
               <div class="col-10 col-sm-3 col-md-3">
                 <div class="logo">
-                  <a href="{{ url_for('main_siqiblat.siqiblat') }}">
-                    <img src="{{ url_for('static', filename='assets/img/watch/logo.png') }}" alt="watch studio">
+                  <a href="#top" class="scroll-to-top">
+                    <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" alt="watch studio">
                   </a>
                 </div>
               </div>
@@ -42,16 +39,8 @@
                 <div class="main-menu-wrap">
                   <nav class="bizes-nav">
                     <ul class="menu">
-                      <li class="has-dropdown"><a href="javascript:void(0)">Layouts</a>
-                        <ul>
-                          {# TODO: ganti endpoint di bawah sesuai blueprint-mu jika sudah ada #}
-                          {# contoh: url_for('main_teleskop.teleskop') / url_for('main_domeakrilik.dome') #}
-                          <li><a href="main_teleskop.teleskop">Teleskop</a></li>
-                          <li><a href="main_akrilikdome.akrilikdome">Dome Akrilik</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#features">Features</a></li>
+                      <li><a href="#about">Tentang Produk</a></li>
+                      <li><a href="#features">Fitur Unggulan</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -65,27 +54,18 @@
       <!-- End Header Area -->
 
       <!-- Start Hero Area -->
-      <div class="watch-hero-area">
+      <div id="top" class="watch-hero-area">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
               <div class="watch-hero-content">
-                <h1>Seekiblat – Penunjuk Arah Kiblat Otomatis</h1>
+                <h1>SiQiblat – Arah Kiblat Otomatis, Anti Ribet</h1>
                 <p>
-                  Seekiblat adalah instrumen berbasis Arduino untuk menentukan arah kiblat
-                  secara otomatis hanya dengan satu tombol, tanpa perlu menghitung sudut kiblat
-                  atau menentukan arah utara sejati terlebih dahulu.
+                  Temukan arah kiblat hanya dengan satu tombol. Cepat. Akurat. 
+                  Bisa digunakan di mana saja.
+                  Tanpa hitung sudut, tanpa kompas manual.
                 </p>
-                <div class="watch-hero-video">
-                  <span>
-                    <a class="venobox vbox-item" data-gall="gall-video" data-autoplay="true"
-                      data-vbtype="video" href="https://vimeo.com/75976293">
-                      <i class="fa fa-play"></i>
-                    </a>
-                    Lihat cara kerja Seekiblat
-                  </span>
-                </div>
-              </div>
+              </div>  
             </div>
             <div class="col-md-4">
               <div class="watch-img-carousel-wrap owl-carousel">
@@ -118,25 +98,33 @@
             <div class="col-md-6 wow fadeInLeft">
               <div class="watch-about-content-wrap">
                 <div class="watch-section-title">
-                  <h4>TENTANG KAMI</h4>
-                  <h2>Seekiblat — Penentu Arah<br> Kiblat Otomatis 1 Tombol</h2>
+                  <h4>Tentang Produk</h4>
+                  <h2>SiQiblat — Penunjuk Arah Kiblat Otomatis 1 Tombol</h2>
                 </div>
                 <div class="watch-about-content">
                   <p>
-                    <strong>Seekiblat</strong> adalah instrumen berbasis Arduino untuk menentukan arah kiblat
-                    secara otomatis hanya dengan <strong>satu tombol</strong>—tanpa perlu menghitung sudut kiblat
-                    atau mencari utara sejati terlebih dahulu. Dapat digunakan di dalam maupun luar ruangan.
+                    <strong>SiQiblat</strong> 
+                    adalah alat berbasis Arduino untuk menentukan arah kiblat secara otomatis.
+                    Praktis, akurat, dan cepat.
+                    Bisa digunakan di dalam maupun luar ruangan.
+                    Tekan satu tombol untuk ukur, satu tombol lagi untuk parkir.
                   </p>
                   <ul>
-                    <li><strong>Akurat & Otomatis:</strong> GPS + kompas digital.</li>
-                    <li><strong>Mudah:</strong> Tekan 1× untuk ukur, 1× lagi untuk parkir.</li>
-                    <li><strong>Kalibrasi cepat:</strong> cukup tahan tombol 2–3 detik.</li>
-                    <li><strong>Fleksibel daya:</strong> adaptor bawaan atau powerbank (USB to jack).</li>
+                    <li><strong>Akurat & Otomatis:</strong> GPS + Kompas Digital</li>
+                    <li><strong>Mudah:</strong> Tekan 1×, langsung ukur</li>
+                    <li><strong>Kalibrasi cepat:</strong> Tahan 2–3 detik</li>
+                    <li><strong>Fleksibel daya:</strong> Adaptor atau powerbank</li>
                   </ul>
-                  <p class="mb-0">
-                    <a class="btn btn-sm btn-primary" href="{{ url_for('static', filename='assets/docs/Manual_Book_Seekiblat.pdf') }}" download="Manual_Book_Seekiblat.pdf"> Panduan Penggunaan </a>
-                    <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20ingin%20konsultasi%20%2APerawatan%20Seekiblat%2A.%0ADetail:%0A•%20Nomor%20seri:%20%5Bisi%5D%0A•%20Kondisi%20pemakaian:%20Indoor/Outdoor%0A•%20Daya:%20Adaptor%20/%20Powerbank%0A•%20Gejala:%20%5Bjelaskan%5D%0A•%20Kalibrasi%202%E2%80%933%20detik%20%2B%20putar:%20Ya/Tidak%0A%0ATerima%20kasih."> Perawatan </a>
-                    <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20butuh%20%2ABantuan%20%26%20Garansi%2A%20untuk%20Seekiblat.%0A%0AData%20pembelian:%0A•%20Nama:%20%5Bisi%5D%0A•%20Tanggal%20beli:%20%5Bisi%5D%0A•%20Toko/Platform:%20%5Bisi%5D%0A•%20Nomor%20seri:%20%5Bisi%5D%0A%0AKendala:%0A•%20Gejala:%20%5Bjelaskan%5D%0A•%20Tes%20adaptor/power:%20Ya/Tidak%0A•%20Kalibrasi%20kompas:%20Ya/Tidak%0A%0AMohon%20arahannya.%20Jika%20perlu%20saya%20kirim%20foto/video."> Bantuan & Garansi </a>
+                  <p>
+                      <a class="btn-modern btn-modern-primary" href="{{ url_for('static', filename='assets/docs/Manual_Book_Seekiblat.pdf') }}" download>
+                          Lihat Panduan
+                      </a>
+                      <a class="btn-modern btn-modern-outline" target="_blank" rel="noopener" href="https://wa.me/...">
+                          Perawatan
+                      </a>
+                      <a class="btn-modern btn-modern-outline" target="_blank" rel="noopener" href="https://wa.me/...">
+                          Bantuan & Garansi
+                      </a>
                   </p>
                 </div>
               </div>
@@ -158,8 +146,8 @@
           <div class="row">
             <div class="col">
               <div class="watch-section-title">
-                <h4>FITUR UTAMA</h4>
-                <h2>Dirancang untuk akurasi, kemudahan,<br> dan keandalan di berbagai kondisi.</h2>
+                <h4>Fitur Unggulan</h4>
+                <h2>Dirancang untuk akurasi, kemudahan, dan keandalan</h2>
               </div>
             </div>
           </div>
@@ -170,7 +158,7 @@
               <div class="single-watch-feature one">
                 <img src="{{ url_for('static', filename='assets/img/watch/6.png') }}" alt="">
                 <h4>GPS + Kompas Digital</h4>
-                <p>Lokasi otomatis via GPS dipadukan kompas digital untuk menentukan arah kiblat secara presisi.</p>
+                <p>Lokasi otomatis, arah kiblat tepat.</p>
               </div>
             </div>
             <!-- 2 -->
@@ -178,7 +166,7 @@
               <div class="single-watch-feature two">
                 <img src="{{ url_for('static', filename='assets/img/watch/7.png') }}" alt="">
                 <h4>Operasi 1 Tombol</h4>
-                <p>Tekan 1× untuk ukur, 1× lagi untuk mengembalikan penunjuk ke posisi parkir. Sesederhana itu.</p>
+                <p>Tekan, ukur, selesai.</p>
               </div>
             </div>
             <!-- 3 -->
@@ -186,7 +174,7 @@
               <div class="single-watch-feature three">
                 <img src="{{ url_for('static', filename='assets/img/watch/8.png') }}" alt="">
                 <h4>Kalibrasi Cepat</h4>
-                <p>Tahan tombol 2–3 detik lalu putar alat hingga muncul “Kalibrasi Sukses — Letakkan Alat”.</p>
+                <p>2–3 detik, siap pakai.</p>
               </div>
             </div>
             <!-- 4 -->
@@ -194,7 +182,7 @@
               <div class="single-watch-feature four">
                 <img src="{{ url_for('static', filename='assets/img/watch/9.png') }}" alt="">
                 <h4>Indoor & Outdoor</h4>
-                <p>Dapat digunakan di luar ruangan untuk ambil GPS lalu dipindahkan ke dalam ruangan untuk penunjukan.</p>
+                <p>Akurat di segala kondisi.</p>
               </div>
             </div>
             <!-- 5 -->
@@ -202,7 +190,7 @@
               <div class="single-watch-feature five">
                 <img src="{{ url_for('static', filename='assets/img/watch/10.png') }}" alt="">
                 <h4>Fleksibel Daya</h4>
-                <p>Pakai adaptor bawaan atau powerbank (USB to jack). Stabil, hemat, dan mudah dibawa.</p>
+                <p>Adaptor bawaan atau powerbank.</p>
               </div>
             </div>
             <!-- 6 -->
@@ -210,7 +198,7 @@
               <div class="single-watch-feature six">
                 <img src="{{ url_for('static', filename='assets/img/watch/11.png') }}" alt="">
                 <h4>Perawatan Aman</h4>
-                <p>Gunakan tegangan & arus sesuai adaptor. Hindari magnet/besi untuk mencegah gangguan kompas.</p>
+                <p>Hindari magnet & logam, tetap presisi.</p>
               </div>
             </div>
           </div>
@@ -218,288 +206,6 @@
       </div>
       <!-- End Features Area -->
 
-      {# <!-- Start call to action area
-      <div class="watch-call-to-action-area overlay-bg-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <div class="watch-cta-content">
-                <h2>Anywhere you go</h2>
-                <p>Saturn and its innermost ring on April 26, the first of 22 such encounters before it will plunge 
-                  into Saturn’s atmosphere in September. What Cassini did not detect were many of the collis
-                  ions of dust particles hitting the spacecraft as it passed through </p>
-                <a href="#" class="watch-cta-btn">Buy now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="spe-pro-area-wrap" id="spec">
-        <div class="watch-spec-area">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <div class="watch-section-title">
-                  <h4>SPECIFICATION</h4>
-                  <h2>We Are Lunch Always New <br>Product For Our Business</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="watch-single-spec wow fadeInLeft">
-                  <div class="watch-spec-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/sp1.png') }}" alt="">
-                  </div>
-                  <div class="spec-centent">
-                    <h1>1GB <span>RAM</span></h1>
-                    <p>INTERNAL MEMORY</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="watch-single-spec wow fadeInUp">
-                  <div class="watch-spec-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/sp2.png') }}" alt="">
-                  </div>
-                  <div class="spec-centent">
-                    <h1>18 <span>HOURS</span></h1>
-                    <p>STAND-BY BATTERY</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="watch-single-spec wow fadeInRight">
-                  <div class="watch-spec-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/sp3.png') }}" alt="">
-                  </div>
-                  <div class="spec-centent">
-                    <h1>1.75 <span>INCHES</span></h1>
-                    <p>DISPLAY SIZE</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="watch-product-area wow fadeInUp">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="watch-pro-content">
-                  <h5>Dimensions</h5>
-                  <p>42 x 35.9 x 10.5 mm (1.65 x 1.41 x 0.41 in)</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>Color</h5>
-                  <p>Silver, space gray, gold, or rose gold</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>Bluetooth</h5>
-                  <p>v4.0, LE</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>OS</h5>
-                  <p>WatchOS 1.0, upgradable to v2.2</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="watch-pro-img">
-                  <img src="{{ url_for('static', filename='assets/img/watch/pro-watch.png') }}" alt="">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="watch-pro-content">
-                  <h5>Messaging</h5>
-                  <p>SMS(threaded view), Email, Push Mail, IM</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>CPU</h5>
-                  <p>Quad Code 520 MHz</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>Sensors</h5>
-                  <p>Accelerometer, gyro, heart rate</p>
-                </div>
-                <div class="watch-pro-content">
-                  <h5>Chipset</h5>
-                  <p>Apple S1</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>	
-
-      <div class="watch-testimonial-area" id="rivew">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="watch-section-title">
-                <h4>RIVEWS</h4>
-                <h2>Some words from our visitors</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="cam-testimonial-wrap owl-carousel">
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi1.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi2.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="cam-single-testimonial">
-                  <div class="cam-quote-img">
-                    <img src="{{ url_for('static', filename='assets/img/watch/quote.png') }}" alt="">
-                  </div>
-                  <div class="cam-textimonial-content">
-                    <p>Connection between our planet and 
-                    the heavens above. These volcanoes, 
-                    which have beguiled millions of touri
-                    sts visiting the Hawaiian islands, hav
-                    ealso plagued scientists with a long
-                    running mystery.</p>
-                  </div>
-                  <div class="cam-textimonial-info">
-                    <div class="cam-testi-img">
-                      <img src="{{ url_for('static', filename='assets/img/livecam/cam-testi3.png') }}" alt="">
-                    </div>
-                    <div class="cam-testi-info">
-                      <h5>Daphnee Schoen</h5>
-                      <span>Founder RRF online</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="watch-pricing-top-area" id="price">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="watch-section-title">
-                <h4>PRICING</h4>
-                <h2>Choose the product that <br>you really need!</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="watch-pricing-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 wow fadeInLft">
-              <div class="watch-price-wrap">
-                <div class="watch-price-head one">
-                  <h3>Sport</h3>
-                  <p>Standard edition</p>
-                </div>
-                <div class="watch-price-body">
-                  <img src="{{ url_for('static', filename='assets/img/watch/price1.png') }}" alt="">
-                  <h2>$299</h2>
-                  <a href="#" class="watch-price-btn">Buy now</a>
-                </div>
-                <div class="watch-price-footer">
-                  <ul>
-                    <li>Maximum converting layout</li>
-                    <li>Pre made signup forms</li>
-                    <li>Best support options</li>
-                    <li>Additional demo layouts</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 wow fadeInUp">
-              <div class="watch-price-wrap">
-                <div class="watch-price-head two">
-                  <h3>Casual</h3>
-                  <p>Premium edition</p>
-                </div>
-                <div class="watch-price-body">
-                  <img src="{{ url_for('static', filename='assets/img/watch/price2.png') }}" alt="">
-                  <h2>$355</h2>
-                  <a href="#" class="watch-price-btn active">Buy now</a>
-                </div>
-                <div class="watch-price-footer">
-                  <ul>
-                    <li>Maximum converting layout</li>
-                    <li>Pre made signup forms</li>
-                    <li>Best support options</li>
-                    <li>Additional demo layouts</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 wow fadeInRight">
-              <div class="watch-price-wrap">
-                <div class="watch-price-head three">
-                  <h3>Gold</h3>
-                  <p>Limited edition</p>
-                </div>
-                <div class="watch-price-body">
-                  <img src="{{ url_for('static', filename='assets/img/watch/price3.png') }}" alt="">
-                  <h2>$425</h2>
-                  <a href="#" class="watch-price-btn">Buy now</a>
-                </div>
-                <div class="watch-price-footer">
-                  <ul>
-                    <li>Maximum converting layout</li>
-                    <li>Pre made signup forms</li>
-                    <li>Best support options</li>
-                    <li>Additional demo layouts</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      End Pricing Area -->#}
 
       <footer class="footer">
           <div class="container text-center text-white">
