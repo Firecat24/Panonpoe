@@ -635,6 +635,20 @@ body {
     background: url("../img/loader/preloader.svg") center no-repeat #fff;
 }
 
+.btn-blue-produk {
+    background: linear-gradient(135deg, rgba(2,166,199,1) 0%, rgba(3,127,152,1) 100%);
+    box-shadow: 3px 3px 51px 0 rgba(0,0,0,0.2);
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    margin-top: 20px;
+}
+.btn-blue-produk:hover {
+    transform: translateY(-7px);
+}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
     .navbar {
