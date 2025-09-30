@@ -38,7 +38,16 @@
 		
 		/* ==== 01. jQuery MeanMenu Active ==== */
 		if ($.fn.meanmenu) {
-			jQuery('.bizes-nav').meanmenu();	
+			$('.bizes-nav').meanmenu({
+				meanMenuContainer: '.mobile-menu-area', // render menu mobile di sini
+				meanScreenWidth:  '991',                 // aktif di <= 991px
+				meanRevealPosition: 'right',             // burger di kanan
+				meanDisplay: 'block',
+				removeElements: '' ,
+				meanMenuClose: '✕',
+				// ikon burger: 3 bar
+				meanMenuOpen: '<span></span><span></span><span></span>'
+			});
 		}
 		
 		/* ==== 02. Drone Testimonial ==== */
@@ -239,18 +248,24 @@
 
 		 }
 
-    	/*====  11. one page js active =====*/
-		$('.main-menu-wrap > .bizes-nav > ul.menu > li > a').on("click", function() {
-			//Toggle Class
+		/*====  11. one page js active (desktop + mobile) =====*/
+		$('.main-menu-wrap > .bizes-nav > ul.menu > li > a, .mean-nav ul li a').on("click", function(e) {
+			//Toggle Class (khusus desktop)
 			$(".active").removeClass("active");
 			$(this).closest('li').addClass("active");
-			var theClass = $(this).attr("class");
-			$('.' + theClass).parent('li').addClass('active');
-			//Animate
-			$('html, body').stop().animate({
-				scrollTop: $($(this).attr('href')).offset().top - 100
-			}, 1000);
-			return false;
+
+			var href = $(this).attr('href');
+			if (href && href.startsWith('#') && $(href).length) {
+				e.preventDefault();
+				$('html, body').stop().animate({
+				scrollTop: $(href).offset().top - 100
+				}, 1000);
+			}
+
+			// tutup menu mobile setelah klik
+			if ($('.meanmenu-reveal').is(':visible')) {
+				$('.meanmenu-reveal').trigger('click');
+			}
 		});
 
 		// Tambahan khusus untuk logo
@@ -263,7 +278,14 @@
 				}, 1000);
 			}
 		});
-
+		
+		$('nav.bizes-nav').meanmenu({
+		meanMenuContainer: '.mobile-menu-area',   // tempat render menu mobile
+		meanRevealPosition: 'right',              // dari awal di kanan
+		meanRevealPositionDistance: '12px',       // jarak dari tepi kanan
+		meanMenuClose: '×',                       // simbol close
+		meanMenuCloseSize: '28px'
+		});
 
 		/* ==== 12. Venobox Active ==== */	
 			$('.venobox').venobox(); 

@@ -524,7 +524,6 @@
 	/*Headphone*/
 	.music-hero-content {
 	    position: static;
-	    padding-top: 140px;
 	}
 	.music-hero-price span h1 {
 	    margin-bottom: 75px;
@@ -533,7 +532,7 @@
 	    height: 1180px;
 	}
 	.music-hero-product {
-	    padding-top: 20px;
+	    padding-top: 140px;
 	}
 	.music-features-pro {
 	    left: 0;

@@ -2571,7 +2571,7 @@ footer.board-footer-area {
 /*=== Header Area ===*/
 
 .cam .logo{
-    width: 30px;
+    width: auto;
 }
 .cam .bizes-nav ul.menu > li > a {
     font-weight: 400;
@@ -2608,59 +2608,87 @@ footer.board-footer-area {
     z-index: -1;
 }
 
-.cam-hero-img {
-    padding-left: 95px;
-    margin-bottom: 40px;
-}
 .cam-hero-img img {
     border: 1px transparent;
     border-radius: 15px;
 }
-.cam-hero-content {
-    position: absolute;
-    top: 50%;
-    padding-right: 80px;
-    transform: translateY(-50%);
+
+/* === HERO: card transparan + teks tidak terlalu kontras === */
+.cam-hero-area {
+  padding: 70px 0;
 }
 
+/* kotak kaca transparan */
+.cam-hero-content {
+  background: rgba(255, 255, 255, 0.14);        /* transparan tipis */
+  backdrop-filter: blur(10px) saturate(130%);   /* efek kaca (Safari/Chrome/Edge) */
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  padding: 28px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* teks dibuat lebih “adem” (gelap lembut) agar tidak kontras dengan background */
 .cam-hero-content h1 {
-    font-size: 58px;
-    color: #0e0e0e;
-    font-weight: 400;
-    line-height: 66px;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;  /* slate-800 */
+  margin-bottom: 16px;
 }
 
 .cam-hero-content p {
-    font-size: 18px;
-    color: #808080;
-    font-family: 'Roboto', sans-serif;
-    line-height: 30px;
-    margin-bottom: 55px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;  /* slate-700 */
+  margin-bottom: 22px;
 }
 
-.cam-hero-content {
-    position: absolute;
-    top: 50%;
-    padding-right: 80px;
-    transform: translateY(-50%);
-    z-index: 2; /* biar teks selalu di atas background & overlay */
+/* tombol tetap tegas tapi tidak terlalu menyala */
+.cam-hero-content .cam-btn {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  background: #1d4ed8;           /* biru lebih kalem */
+  border-radius: 8px;
+  padding: 12px 22px;
+}
+.cam-hero-content .cam-btn:hover {
+  background: #0f172a;           /* slate-900 saat hover */
+  color: #fff;
 }
 
-.cam-hero-content {
-    background: rgba(255, 255, 255, 0.8); /* putih transparan */
-    padding: 30px;
-    border-radius: 12px;
-    display: block; /* full 1 kolom */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* biar ada depth */
-
-    position: relative; /* reset dari absolute */
-    top: auto;
-    transform: none;
-    z-index: 2;
+/* gambar biar rapi */
+.cam-hero-img {
+  text-align: center;
+}
+.cam-hero-img img {
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
 }
 
+/* responsif */
+@media (max-width: 991px) {
+  .cam-hero-content {
+    margin-top: 18px;            /* geser ke bawah kalau kolom jadi stack */
+    padding: 22px;
+  }
+  .cam-hero-content h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .cam-hero-content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .cam-hero-area .row {
     display: flex;
     align-items: center; /* vertikal center */
@@ -2687,12 +2715,6 @@ button.widget-sbtn-cam:hover {
     color: #fff;
     transform: translateY(-2px); /* efek hover simple */
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.cam-hero-content a.cam-btn {
-    display: block;
-    margin: 20px auto 0 auto; /* atas 20px, kanan auto, bawah 0, kiri auto */
-    width: fit-content;
 }
 
 
@@ -4715,4 +4737,72 @@ a.btn-prev {
     margin: 20px 0 0;
     color: #fff;
     font-family: 'Rubik', sans-serif !important;
+}
+
+/* ===== Header fix + Poppins utk navbar + logo 50.2 x 56 ===== */
+.primary-header .navigation-area {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* navbar pakai Poppins saja */
+.primary-header,
+.primary-header .main-menu-wrap,
+.primary-header .bizes-nav ul.menu > li > a {
+  font-family: "Poppins", sans-serif;
+}
+
+.primary-header .navigation-area .row {
+  min-height: 64px;          /* cukup untuk logo tinggi 56px */
+  align-items: center;
+}
+
+/* logo fix 50.2 x 56 — override semua aturan lama */
+.primary-header .logo img {
+  width: 55px !important;
+  height: 61px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain;
+  padding: 6px 0;
+  transition: height .2s ease, padding .2s ease;
+}
+
+/* saat sticky tetap sama ukurannya */
+.scroll-header .logo img {
+  width: 55px !important;
+  height: 61px !important;
+  max-width: none !important;
+  max-height: none !important;
+  padding: 4px 0;
+}
+
+/* menu pakai flex (rapi kanan) */
+.primary-header .main-menu-wrap nav.bizes-nav ul.menu {
+  display: flex !important;
+  gap: 28px;
+  justify-content: flex-end;
+  align-items: center;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-header .bizes-nav .menu > li { float: none; padding: 0; }
+.primary-header .bizes-nav ul.menu > li > a {
+  padding: 0;
+  line-height: 1;
+  font-size: 15px;
+  color: #30323c;
+}
+.primary-header .bizes-nav ul.menu > li > a:hover { color: #1d4ed8; }
+
+/* responsif */
+@media (max-width: 991px) {
+  .primary-header .navigation-area .row { min-height: 60px; }
+  /* logo TETAP 50.2x56 — tidak diubah agar konsisten */
+  .primary-header .bizes-nav ul.menu { gap: 20px; }
+}
+@media (max-width: 767px) {
+  /* jika plugin mengganti jadi mobile menu, aturan ini aman diabaikan */
 }

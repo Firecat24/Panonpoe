@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme-plugins.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style_akrilikdome.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive_akrilikdome.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/eksternal/logo_4.ico') }}">
   </head>
   <body>
@@ -27,12 +27,12 @@
             <div class="row">
               <div class="col-4 col-sm-2 col-md-2">
                 <div class="logo">
-                  <a href="#top" class="scroll-to-top">
+                  <a href="{{ url_for('main_dashboard.index') }}" class="scroll-to-top">
                     <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" alt="watch studio">
                   </a>
                 </div>
               </div>
-              <div class="col-2 col-sm-2 col-lg-8 order-one order-one-music">
+              <div class="col-2 col-sm-2 col-lg-10 order-one order-one-music">
                 <div class="main-menu-wrap">
                   <nav class="bizes-nav">
                     <ul class="menu"> 
