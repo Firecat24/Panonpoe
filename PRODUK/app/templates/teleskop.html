@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="bizes is a multipurpose buisness template suitable for agency, business, consultant, corporate, creative, finance, portfolio, startup, trading  or any other business website">
-    <meta name="keywords" content="bizes, Bootstrap, Construction, finance, Real Estate, Corporate, Template ">
-    <meta name="author" content="Masud Rana">		
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
     <title>Teleskop</title>
 
     <!-- All CSS Here -->
@@ -17,21 +17,17 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/eksternal/logo_4.ico') }}">
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <!-- Start Wrapper -->
     <div class="wrapper cam">
       <!-- Start Header Area -->
-      <header class="header-area primary-header">
+      <header class="header-area primary-header absulate-header">
         <div class="navigation-area">
           <div class="container">
             <div class="row">
               <div class="col-9 col-sm-2 col-md-2">
                 <div class="logo">
-                  <a href="#home-header">
+                  <a href="{{ url_for('main_dashboard.index') }}">
                     <img src="{{ url_for('static', filename='assets/img/eksternal/logo_3.png') }}" alt="Logo">
                   </a>
                 </div>
@@ -187,13 +183,6 @@
                 <a href="https://tk.tokopedia.com/ZSDXNX5Ag/" class="cam-btn">Cek Ketersediaan</a>
               </div>
             </div>
-            {#<!-- <div class="col-md-4">
-              <div class="single-cam-product wow fadeInUp active">
-                <img src="{{ url_for('static', filename='assets/img/livecam/procam2.png') }}" alt="">
-                <h5>Samsung Gear 360 4K Spherical</h5>
-                <a href="#" class="cam-btn">Buy now</a>
-              </div>
-            </div> -->#}
             <div class="col-md-4">
               <div class="single-cam-product wow fadeInRight">
                 <img src="{{ url_for('static', filename='assets/img/eksternal/p2.png') }}" alt="">

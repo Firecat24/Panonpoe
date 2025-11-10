@@ -58,23 +58,7 @@ $(document).ready(function () {
         }
     })();
 
-    /* =======================
-       Counter Up
-    ======================== */
-    if ($.fn.counterUp) {
-        $('.counter').counterUp({ delay: 10, time: 3000 });
-    }
 
-    /* =======================
-       Magnific Popup
-    ======================== */
-    if ($.fn.magnificPopup) {
-        $('.open-gallery').magnificPopup({
-            type: 'inline',
-            midClick: true
-        });
-        $('.video-link').magnificPopup({ type: 'iframe' });
-    }
 
     /* =======================
        Loader

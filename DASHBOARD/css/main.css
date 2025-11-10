@@ -6,24 +6,18 @@ Version: 1.0
 -------------------------------------
 
 Table of contents
-        
+
     01. Navbar
     02. Slider
     03. About
     04. Services
-    05. Services
-    06. Get Started
-    07. Portfolio
-    08. Our Team
-    09. Testimonials
-    10. Pricing
-    11. Want Work
-    12. Blog
-    13. Clients
-    14. Contact
-    15. Footer
-    16. Page Loading
-    17. Media Query
+    05. Get Started
+    06. Portfolio
+    07. Publisher & Mission
+    08. Contact
+    09. Footer
+    10. Page Loading
+    11. Media Query
 */
 
 body {
@@ -230,18 +224,9 @@ body {
 }
 .services .right {
     background: url("../img/eksternal/1.png") center center no-repeat;
-    width: 100%;                 /* ikut lebar kolom */
-    aspect-ratio: 673 / 540;     /* rasio asli gambar (width/height) */
-    border-radius: 12px;         /* opsional */
-}
-.video-icon .icon {
-    background: linear-gradient(135deg, rgba(2,166,199,1) 0%, rgba(3,127,152,1) 100%);
-    color: #ffffff;
-    display: inline;
-    font-size: 20px;
-    padding: 23px 28px;
-    border-radius: 200px;
-    position: relative;
+    width: 100%;                
+    aspect-ratio: 673 / 540;     
+    border-radius: 12px;        
 }
 
 /*--------------------------------------------------
@@ -418,21 +403,6 @@ body {
 .portfolio .grid-item {
     padding: 0;
 }
-
-.mfp-inline-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.mfp-inline-gallery img {
-    max-width: 45%;  
-    height: auto;
-    border-radius: 8px;
-}
-
 /*--------------------------------------------------
 [6. Start Our Mission]
 --------------------------------------------------*/
@@ -520,12 +490,6 @@ body {
 }
 .mission .text .btn-blue:hover {
     transform: translateY(-7px);
-}
-
-.disabled-link {
-  pointer-events: none;   /* tidak bisa diklik */
-  opacity: 0.6;           /* tampak redup */
-  cursor: not-allowed;    /* cursor silang */
 }
 /*--------------------------------------------------
 [13. Contact]
@@ -685,29 +649,11 @@ body {
     .services .right {
         margin-top: 40px;
     }
-    .team .box {
-        margin-bottom: 40px;
-    }
     .mission {
         padding: 80px 0 120px 0;
     }
     .mission .text {
         margin-top: 40px;
-    }
-    .some-facts {
-        padding: 120px 0 70px 0;
-    }
-    .some-facts .items {
-        margin-bottom: 50px;
-    }
-    .price {
-        padding: 120px 0 80px 0;
-    }
-    .price .cards {
-        margin-bottom: 40px;
-    }
-    .mfp-inline-gallery img {
-    max-width: 100%;
     }
     .services .right { min-height: 240px; 
     }
@@ -774,29 +720,11 @@ body {
     .services .right {
         margin-top: 40px;
     }
-    .team .box {
-        margin-bottom: 40px;
-    }
     .mission {
         padding: 80px 0 120px 0;
     }
     .mission .text {
         margin-top: 40px;
-    }
-    .some-facts {
-        padding: 120px 0 70px 0;
-    }
-    .some-facts .items {
-        margin-bottom: 50px;
-    }
-    .price {
-        padding: 120px 0 80px 0;
-    }
-    .price .cards {
-        margin-bottom: 40px;
-    }
-    .mfp-inline-gallery img {
-    max-width: 100%;
     }
     .services .right { min-height: 240px; 
     }
@@ -829,29 +757,11 @@ body {
     .services .right {
         margin-top: 40px;
     }
-    .team .box {
-        margin-bottom: 40px;
-    }
     .mission {
         padding: 80px 0 120px 0;
     }
     .mission .text {
         margin-top: 40px;
-    }
-    .some-facts {
-        padding: 120px 0 70px 0;
-    }
-    .some-facts .items {
-        margin-bottom: 50px;
-    }
-    .price {
-        padding: 120px 0 80px 0;
-    }
-    .price .cards {
-        margin-bottom: 40px;
-    }
-    .mfp-inline-gallery img {
-    max-width: 48%;
     }
     .services .right { min-height: 240px; 
     }
