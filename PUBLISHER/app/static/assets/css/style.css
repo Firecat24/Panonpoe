@@ -4531,3 +4531,21 @@ button.mfp-close {
 #home-header ul.styled li {
     color: #fff;
 }
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 5px #999;
+    z-index: 1000;
+}
+.my-float {
+    margin-top: 12px;
+}
