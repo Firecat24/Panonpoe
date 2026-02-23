@@ -1,3 +1,7 @@
 PUBLISHER/.env
+PUBLISHER/requirements.txt
+PUBLISHER/app/config.py
 PRODUK/.env
+PRODUK/requirements.txt
+PRODUK/app/config.py
 catatan_farhan.txt
