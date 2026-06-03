@@ -165,6 +165,59 @@
       </div>
       <!-- End Gallery -->
 
+      <!-- Extra Gallery -->
+<div class="extra-gallery-section">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="music-section-title wow fadeInUp">
+          <h2>Variasi Dome Akrilik</h2>
+          <p>
+            Lihat berbagai variasi lainnya.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahan GALERI TINGGAL ISI GAMBAR -->
+    <div class="gallery-grid">
+
+      {% for d in extra_domes %}
+      <div class="gallery-item">
+
+        {% if d.url %}
+          <a href="{{ d.url }}"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="{{ d.name }}">
+
+            <img src="{{ url_for('static', filename=d.img) }}"
+                 alt="{{ d.name }}"
+                 loading="lazy">
+
+          </a>
+        {% else %}
+
+          <img src="{{ url_for('static', filename=d.img) }}"
+               alt="{{ d.name }}"
+               loading="lazy">
+
+        {% endif %}
+
+        <p>{{ d.name }}</p>
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</div>
+<!-- End Extra Gallery -->
+
       <!-- Custom Order -->
       <div class="music-buy-area text-center" id="custom">
         <div class="container">
