@@ -186,30 +186,42 @@
 
       {% for d in extra_domes %}
       <div class="gallery-item">
+        {% set img_urls = [] %}
+        {% for img_path in d.images %}
+            {% set _ = img_urls.append(url_for('static', filename=img_path)) %}
+        {% endfor %}
 
         {% if d.url %}
           <a href="{{ d.url }}"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="{{ d.name }}">
-
-            <img src="{{ url_for('static', filename=d.img) }}"
-                 alt="{{ d.name }}"
-                 loading="lazy">
-
+            class="popup-trigger"
+            data-url="{{ d.url }}"
+            data-name="{{ d.name }}"
+            aria-label="{{ d.name }}">
+            
+            <img src="{{ img_urls[0] }}"
+                alt="{{ d.name }}"
+                loading="lazy"
+                class="slideshow-img" 
+                data-images='{{ img_urls | tojson | safe }}'>
           </a>
         {% else %}
-
-          <img src="{{ url_for('static', filename=d.img) }}"
-               alt="{{ d.name }}"
-               loading="lazy">
-
+          <img src="{{ img_urls[0] }}"
+              alt="{{ d.name }}"
+              loading="lazy"
+              class="slideshow-img"
+              data-images='{{ img_urls | tojson | safe }}'>
         {% endif %}
 
         <p>{{ d.name }}</p>
-
       </div>
       {% endfor %}
+
+      <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <a href="#" id="modalLink" target="_blank" rel="noopener noreferrer" class="modal-link">Beli di Tokopedia</a>
+      </div>
 
     </div>
 

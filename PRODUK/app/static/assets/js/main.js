@@ -321,3 +321,73 @@
 	
 	
 })(jQuery); 
+
+document.addEventListener("DOMContentLoaded", function() {
+// ----------------------------------------------------
+// FITUR 1: SLIDESHOW RANDOM
+// ----------------------------------------------------
+const images = document.querySelectorAll('.slideshow-img');
+
+images.forEach(imgElement => {
+	const imgUrls = JSON.parse(imgElement.getAttribute('data-images'));
+
+	if (imgUrls && imgUrls.length > 1) {
+	let currentIndex = 0;
+	
+	function changeImageRandomly() {
+		const randomTime = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+
+		setTimeout(() => {
+		currentIndex = (currentIndex + 1) % imgUrls.length;
+		imgElement.src = imgUrls[currentIndex];
+		changeImageRandomly();
+		}, randomTime);
+	}
+	changeImageRandomly();
+	}
+});
+
+// ----------------------------------------------------
+// FITUR 2: POPUP/MODAL KETIKA DIKLIK
+// ----------------------------------------------------
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const modalLink = document.getElementById("modalLink");
+const modalText = document.getElementById("modalCaption");
+const closeBtn = document.querySelector(".close-modal");
+
+// Ambil semua tag <a> yang memiliki class popup-trigger
+const triggers = document.querySelectorAll('.popup-trigger');
+
+triggers.forEach(trigger => {
+	trigger.addEventListener('click', function(e) {
+	// Mencegah halaman langsung pindah ke link tujuan
+	e.preventDefault(); 
+	
+	// Cari gambar yang ADA di dalam link yang diklik
+	const currentImg = this.querySelector('img');
+	
+	// Tampilkan modal (Ubah display menjadi flex)
+	modal.style.display = "flex";
+	
+	// Tembak src gambar yang SEDANG TAMPIL SAAT INI ke dalam popup
+	modalImg.src = currentImg.src; 
+	
+	// Isi teks dan link-nya
+	modalText.innerText = this.getAttribute('data-name');
+	modalLink.href = this.getAttribute('data-url');
+	});
+});
+
+// Fitur untuk menutup popup ketika tombol X diklik
+closeBtn.addEventListener('click', () => {
+	modal.style.display = "none";
+});
+
+// Fitur untuk menutup popup ketika mengklik area gelap di luar gambar
+window.addEventListener('click', (e) => {
+	if (e.target === modal) {
+	modal.style.display = "none";
+	}
+});
+});
