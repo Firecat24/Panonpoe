@@ -86,3 +86,10 @@ $(document).ready(function () {
         }
     });
 });
+
+// Refresh gambar otomatis setiap 10 detik
+setInterval(function() {
+    var img = document.getElementById('allsky-cam');
+    // Tambahkan timestamp agar browser tidak memuat cache lama
+    img.src = 'image.jpg?t=' + new Date().getTime();
+}, 3000);

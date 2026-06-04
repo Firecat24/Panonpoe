@@ -63,24 +63,12 @@
         <p>
             Pantau kondisi langit dan observasi secara realtime dari Bandung, Indonesia.
         </p>
-
-        <!-- Live Camera Box -->
         <div class="live-camera-box">
-
-            <!-- OPTION 1 : iframe -->
-            <!--
-            <iframe
-                src="YOUR_STREAM_URL"
-                allowfullscreen>
-            </iframe>
-            -->
-
-            <!-- OPTION 2 : image -->
             <img
-                src="{{ url_for('static', filename='img/livecam/sample.jpg') }}"
+                id="allsky-cam"
+                src="image.jpg"
                 alt="Live Camera">
 
-            <!-- Status Bar -->
             <div class="camera-status-bar">
 
                 <div class="status-item">

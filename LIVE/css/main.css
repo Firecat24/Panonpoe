@@ -68,6 +68,9 @@ body {
     min-height: 100vh;
     position: relative;
     padding-bottom: 80px;
+    min-height: 100vh; /* Kunci 1: Memaksa tinggi minimal 1 layar penuh, tapi BISA melar ke bawah */
+    height: auto;      /* Kunci 2: Membiarkan tingginya menyesuaikan isi konten di dalamnya */
+    padding-bottom: 80px;
 }
 
 #particles-js {
@@ -124,14 +127,20 @@ body {
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
+.live-camera-box img {
+    width: 100%;
+    height: auto; /* Ini adalah kunci ajaib agar gambar selalu proporsional, tidak akan pernah terpotong dari sisi gambarnya */
+    display: block;
+}
 .live-camera-box iframe,
-.live-camera-box img,
 .live-camera-box video {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: auto;
+    max-height: 65vh; /* KUNCI UTAMA: Membatasi tinggi gambar maksimal 65% dari tinggi layar browser */
     display: block;
     border: 0;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000; /* Menjaga latar belakang tetap hitam jika rasio gambar mengecil */
 }
 .camera-status-bar {
     display: flex;
