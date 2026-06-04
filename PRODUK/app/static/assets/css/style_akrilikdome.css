@@ -650,7 +650,7 @@ a.meanmenu-reveal span {
 
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3/3;
   object-fit: cover;
   border-radius: 14px;
   display: block;
@@ -666,6 +666,66 @@ a.meanmenu-reveal span {
   text-align: center;
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* Gaya untuk Modal (Popup) */
+.modal {
+  display: none; /* Sembunyikan secara default */
+  position: fixed; 
+  z-index: 1000; /* Pastikan selalu berada di atas */
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.8); /* Background hitam transparan */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Gambar di dalam Modal */
+.modal-content {
+  max-width: 80%; 
+  max-height: 70vh;
+  width: auto;          /* Biarkan lebar menyesuaikan aslinya */
+  height: auto;         /* Biarkan tinggi menyesuaikan aslinya */
+  object-fit: contain;  /* KUNCI UTAMA: Jaga proporsi asli gambar agar tidak gepeng */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Teks nama produk */
+.modal-caption {
+  color: white; 
+  margin-top: 15px; 
+  font-size: 1.2rem;
+}
+
+/* Tombol link */
+.modal-link {
+  display: inline-block; 
+  margin-top: 15px;
+  padding: 10px 20px; 
+  background-color: #42b549; /* Warna hijau khas Tokopedia */
+  color: white;
+  text-decoration: none; 
+  border-radius: 5px; 
+  font-weight: bold;
+}
+
+.modal-link:hover {
+  background-color: #389c3f;
+}
+
+/* Tombol Close (X) */
+.close-modal {
+  position: absolute; 
+  top: 20px; 
+  right: 40px;
+  color: #f1f1f1; 
+  font-size: 40px; 
+  font-weight: bold; 
+  cursor: pointer;
 }
 
 /* Tablet */
