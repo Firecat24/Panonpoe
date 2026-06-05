@@ -617,6 +617,142 @@ body {
     text-decoration: none !important; 
 }
 
+.live{
+    padding:0 0 70px 0;
+}
+/* Wrapper agar posisinya rapi di tengah */
+.allsky-portal-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+/* Kotak Utama - Menggunakan gaya Glassmorphism */
+.allsky-portal-card {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    /* Efek membesar perlahan saat di-hover */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.allsky-portal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar Background */
+.portal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.8s ease;
+}
+
+/* Efek gambar nge-zoom saat kotak di-hover */
+.allsky-portal-card:hover .portal-bg {
+    transform: scale(1.05);
+}
+
+/* Lapisan Gelap agar teks mudah dibaca */
+.portal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 2;
+}
+
+/* Isi Teks dan Tombol */
+.portal-content {
+    position: relative;
+    z-index: 3;
+    padding: 70px 90px;
+    color: #fff;
+    max-width: 800px;
+}
+
+/* Badge Live yang Elegan */
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 50, 0.15);
+    border: 1px solid rgba(255, 0, 50, 0.3);
+    color: #ff3b5c;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Titik Merah Berkedip */
+.pulsing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff3b5c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff3b5c;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+.portal-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.portal-content p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Tombol Aksi */
+.btn-portal {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #03b0d5; /* Warna aksen biru yang Anda pakai sebelumnya */
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-portal:hover {
+    text-decoration: none;
+    background: #ffffff;
+    gap: 15px; /* Panahnya geser sedikit saat di-hover */
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .portal-content { padding: 40px 24px; }
+    .portal-content h2 { font-size: 32px; }
+    .portal-overlay { background: rgba(0,0,0,0.7); } /* Lebih gelap di HP agar teks terbaca */
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
     .navbar {
