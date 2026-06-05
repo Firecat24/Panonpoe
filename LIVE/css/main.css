@@ -45,7 +45,7 @@ body {
     justify-content: space-between;
 }
 .navbar-brand img {
-    height: 52px;
+    height: 46px;
     width: auto;
 }
 .navbar .nav-link {
@@ -57,6 +57,64 @@ body {
 }
 .navbar .nav-link:hover {
     color: #03b0d5 !important;
+}
+.navbar-nav {
+    align-items: center;
+}
+.navbar .nav-link {
+    position: relative;
+    color: rgba(255,255,255,0.82) !important;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 24px;
+    transition: all 0.3s ease;
+}
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #03b0d5;
+
+    transition: width 0.3s ease;
+}
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+.navbar .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 0;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-toggler {
+    width: 28px;
+    height: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-toggler span {
+    display: block;
+    height: 2px;
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
 }
 /*--------------------------------------------------
 [02. Start Slider]
@@ -311,152 +369,76 @@ body {
     text-decoration: none !important; 
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
-    .navbar {
-        background: #212529 !important;
-        padding:30px;
-        box-shadow: 0 8px 20px rgba(0,0,0,.12);
-        backdrop-filter: saturate(140%) blur(6px);
-    }
-    .navbar .nav-item {
-        margin: 0;
-        padding: 0;
-        margin: 10px 0;
-    }
-    .navbar .nav-item .nav-link {
-        margin: 0;
-    }
-    .navbar .navbar-brand img {
-        height: 40px;
-    }
-    .slider {
-        height: 800px;
-        text-align: center;
-    }
-    .about {
-        padding: 120px 0 80px 0;
-    }
-    .about .box {
-        margin-bottom: 40px;
-    }
-    .services .right {
-        margin-top: 40px;
-    }
-    .mission {
-        padding: 80px 0 120px 0;
-    }
-    .mission .text {
-        margin-top: 40px;
-    }
-    .services .right { min-height: 240px; 
-    }
-    .footer img{
-        width: 300px;
-    }
-}
+/* ==================================================
+[ Mobile & Tablet Responsive ]
+================================================== */
 
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-    .navbar {
-        background: #212529 !important;
-        padding:30px;
-    }
-    .navbar .nav-item {
-        margin: 0;
-        padding: 0;
-        margin: 10px 0;
-    }
-    .navbar .nav-item .nav-link {
-        margin: 0;
-    }
-    .slider {
-        height: 900px;
-        text-align: center;
-    }
-    .slider .content {
-        position: static;         /* lepas dari absolute */
-        transform: none;          /* hilangkan translate */
-        left: auto; top: auto;
-        margin: 0 auto;           /* center via margin */
-        padding: 16px;
-        width: 92vw;
-        max-width: 92vw;
-        box-sizing: border-box;
-        border-radius: 10px;
-    }
-
-    .slider .content span {
-        font-size: 18px;
-    }
-
-    .slider .content h1 {
-        font-size: 34px;          /* dari 65px → 34px */
-        line-height: 1.15;
-    }
-
-    .slider .content p {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    .slider .content .btn-blue {
-        padding: 12px 24px;
-    }
-    .about {
-        padding: 120px 0 80px 0;
-    }
-    .about .box {
-        margin-bottom: 40px;
-    }
-    .services .right {
-        margin-top: 40px;
-    }
-    .mission {
-        padding: 80px 0 120px 0;
-    }
-    .mission .text {
-        margin-top: 40px;
-    }
-    .services .right { min-height: 240px; 
-    }
-}
-
-/* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+
+    /* =========================Navbar ========================= */
     .navbar {
-        background: #212529 !important;
-        padding:30px;
+        padding: 18px 0;
+        background: rgba(10, 15, 20, 0.92) !important;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    .navbar .nav-item {
-        margin: 0;
-        padding: 0;
-        margin: 10px 0;
+    .navbar-brand img {
+        height: 42px;
     }
-    .navbar .nav-item .nav-link {
-        margin: 0;
+    .navbar-collapse {
+        margin-top: 18px;
+        padding: 22px;
+        border-radius: 18px;
+        background: rgba(15,20,25,0.96);
+        border: 1px solid rgba(255,255,255,0.05);
+        backdrop-filter: blur(16px);
     }
+    .navbar-nav {
+        align-items: flex-start;
+    }
+    .navbar .nav-link {
+        margin-left: 0;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+    /* =========================Hero========================= */
     .slider {
-        height: 900px;
-        text-align: center;
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 60px;
+        background-attachment: scroll;
     }
-    .about {
-        padding: 120px 0 80px 0;
+    .live-hero-content {
+        padding: 130px 20px 40px;
     }
-    .about .box {
-        margin-bottom: 40px;
+    .live-label {
+        font-size: 12px;
+        padding: 8px 14px;
     }
-    .services .right {
-        margin-top: 40px;
+    .live-hero-content h1 {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 18px;
     }
-    .mission {
-        padding: 80px 0 120px 0;
+    .live-hero-content p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 28px;
     }
-    .mission .text {
-        margin-top: 40px;
+    /* =========================Live Camera========================= */
+    .live-camera-box {
+        border-radius: 10px !important;
     }
-    .services .right { min-height: 240px; 
+    .camera-status-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 18px;
+    }
+    /* =========================Footer========================= */
+    .footer img {
+        width: 240px;
+        max-width: 90%;
     }
 }
