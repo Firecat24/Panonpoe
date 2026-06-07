@@ -93,3 +93,39 @@ setInterval(function() {
     // Tambahkan timestamp agar browser tidak memuat cache lama
     img.src = 'image.jpg?t=' + new Date().getTime();
 }, 3000);
+
+/* =======================
+   Archive Tabs
+======================== */
+
+const archiveButtons =
+    document.querySelectorAll('.archive-btn');
+
+const archiveContents =
+    document.querySelectorAll('.archive-content');
+
+archiveButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const target =
+            button.getAttribute('data-target');
+
+        archiveButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        archiveContents.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        button.classList.add('active');
+
+        document
+            .getElementById(target)
+            .classList
+            .add('active');
+
+    });
+
+});

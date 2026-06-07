@@ -9,9 +9,11 @@ Table of contents
 
     01. Navbar
     02. Slider
-    03. Contact
-    04. Footer
-    05. Page Loading
+    03. Observation Archive
+    04. Contact 
+    05. Footer
+    06. Page Loading
+    07. Mobile & Tablet Responsive
 */
 
 body {
@@ -261,8 +263,152 @@ body {
     }
 
 }
+
 /*--------------------------------------------------
-[03. Contact]
+[03. Observation Archive]
+--------------------------------------------------*/
+
+.observation-archive {
+    padding: 120px 0;
+    background:
+        linear-gradient(
+            to bottom,
+            #081018 0%,
+            #0f1722 100%
+        );
+    color: #ffffff;
+}
+
+.archive-heading {
+    margin-bottom: 50px;
+}
+
+.archive-heading span {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #03b0d5;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.archive-heading h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.archive-heading p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+}
+
+/* Tabs */
+
+.archive-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.archive-btn {
+    border: 0;
+    padding: 14px 28px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.06);
+
+    color: rgba(255,255,255,0.7);
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+}
+
+.archive-btn:hover {
+    background: rgba(3,176,213,0.2);
+    color: #ffffff;
+}
+
+.archive-btn.active {
+    background: linear-gradient(
+        135deg,
+        rgba(2,166,199,1) 0%,
+        rgba(3,127,152,1) 100%
+    );
+
+    color: #ffffff;
+}
+
+/* Content */
+
+.archive-content {
+    display: none;
+}
+
+.archive-content.active {
+    display: block;
+    animation: fadeArchive 0.4s ease;
+}
+
+@keyframes fadeArchive {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.archive-card {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.archive-card img,
+.archive-card video {
+    width: 100%;
+    display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+    .observation-archive {
+        padding: 80px 0;
+    }
+
+    .archive-heading h2 {
+        font-size: 30px;
+    }
+
+    .archive-btn {
+        width: 100%;
+        max-width: 240px;
+    }
+
+}
+/*--------------------------------------------------
+[04. Contact]
 --------------------------------------------------*/
 .live-contact {
     padding: 100px 20px;
@@ -317,7 +463,7 @@ body {
     margin-top: 12px;
 }
 /*--------------------------------------------------
-[04. Start Footer]
+[05. Start Footer]
 --------------------------------------------------*/
 .footer {
     background: #212529;
@@ -330,7 +476,7 @@ body {
 }
 
 /*--------------------------------------------------
-[05. Start Page Loading]
+[06. Start Page Loading]
 --------------------------------------------------*/
 .no-js #loader {
     display: none;
@@ -370,7 +516,7 @@ body {
 }
 
 /* ==================================================
-[ Mobile & Tablet Responsive ]
+[07. Mobile & Tablet Responsive ]
 ================================================== */
 
 @media (max-width: 991.98px) {
@@ -436,6 +582,8 @@ body {
         gap: 12px;
         padding: 16px 18px;
     }
+
+    
     /* =========================Footer========================= */
     .footer img {
         width: 240px;
