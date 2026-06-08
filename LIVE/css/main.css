@@ -122,9 +122,7 @@ body {
 [02. Start Slider]
 --------------------------------------------------*/
 .slider {
-    background: url("../img/bg/background.webp") center center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: #000;
     min-height: 100vh;
     position: relative;
     padding-bottom: 80px;

@@ -76,7 +76,7 @@
                     <div class="archive-content active" id="timelapse-content">
                         <div class="archive-folder-grid">
                             <?php
-                            $dirTimelapse = "videos/";
+                            $dirTimelapse = "videos/"; // Menembak ke folder videos/
                             if (is_dir($dirTimelapse)) {
                                 $files = glob($dirTimelapse . "*.{mp4,mkv,mov,avi,webm,jpg,jpeg,png,gif,webp}", GLOB_BRACE);
                                 
@@ -84,7 +84,6 @@
                                     arsort($files);
                                     $totalFiles = count($files);
 
-                                    // Pengaturan Pagination Timelapse (4 ke kanan, 2 ke bawah = 8 item)
                                     $limit = 8; 
                                     $page = isset($_GET['p_timelapse']) ? (int)$_GET['p_timelapse'] : 1;
                                     $page = ($page < 1) ? 1 : $page;
@@ -102,19 +101,29 @@
                                             
                                             $fileType = in_array($ext, ['jpg','jpeg','png','gif','webp']) ? 'image' : 'video';
                                             
+                                            // --- LOGIKA GENERATOR THUMBNAIL CANVAS UNTUK VIDEOS ---
+                                            $isExtraClass = "";
+                                            $dataVideoAttr = "";
+
                                             if ($fileType === 'image') {
                                                 $thumbnail = $file;
                                                 $icon = "🔍";
                                             } else {
                                                 $possibleCover = $dirTimelapse . $fileNoExt . ".jpg";
-                                                $thumbnail = file_exists($possibleCover) ? $possibleCover : "img/livecam/thumb-timelapse.jpg";
+                                                if (file_exists($possibleCover)) {
+                                                    $thumbnail = $possibleCover;
+                                                } else {
+                                                    $thumbnail = "img/livecam/thumb-timelapse.jpg"; // Default cover timelapse Anda sementara
+                                                    $isExtraClass = " need-thumb"; 
+                                                    $dataVideoAttr = ' data-video="' . $file . '"'; // Path mengarah ke videos/namafile.mp4
+                                                }
                                                 $icon = "▶";
                                             }
 
                                             echo '
                                             <div class="video-item-card" data-file-src="' . $file . '" data-file-type="' . $fileType . '">
                                                 <div class="video-thumbnail-wrapper">
-                                                    <img src="' . $thumbnail . '" alt="' . $cleanTitle . '">
+                                                    <img class="lazy-thumb' . $isExtraClass . '"' . $dataVideoAttr . ' src="' . $thumbnail . '" alt="' . $cleanTitle . '">
                                                     <div class="play-overlay-icon"><i class="play-icon">' . $icon . '</i></div>
                                                 </div>
                                                 <span class="video-title">' . ucwords($cleanTitle) . '</span>
@@ -127,17 +136,7 @@
                             } else { echo '<p class="text-muted text-center w-100">Folder videos/ tidak ditemukan.</p>'; }
                             ?>
                         </div>
-
-                        <?php if (isset($totalPages) && $totalPages > 1): ?>
-                            <div class="pagination-nav text-center mt-4">
-                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                    <a href="?p_timelapse=<?php echo $i; ?>" class="btn-page <?php echo ($page == $i) ? 'active' : ''; ?>">
-                                        <?php echo $i; ?>
-                                    </a>
-                                <?php endfor; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>        
+                    </div>
 
                     <div class="archive-content" id="startrail-content">
                         <div class="archive-folder-grid">

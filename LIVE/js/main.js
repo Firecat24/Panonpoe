@@ -230,3 +230,40 @@ tabButtons.forEach(button => {
         document.getElementById(targetId).classList.add("active");
     });
 });
+
+// --- AUTO GENERATE VIDEO THUMBNAIL VIA CANVAS ---
+const imagesNeedThumb = document.querySelectorAll(".need-thumb");
+
+imagesNeedThumb.forEach(img => {
+    const videoUrl = img.getAttribute("data-video");
+    
+    // Buat objek video bayangan di memori browser
+    const video = document.createElement("video");
+    video.src = videoUrl;
+    video.preload = "metadata";
+    video.muted = true;
+    video.playsInline = true;
+
+    // Saat browser berhasil membaca info frame video
+    video.addEventListener("loadeddata", function () {
+        // Lompat ke detik ke-1 agar covernya tidak menangkap layar hitam/gelap di detik ke-0
+        video.currentTime = 1; 
+    });
+
+    // Setelah browser berhasil menggeser timeline video ke detik 1
+    video.addEventListener("seeked", function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Mengubah gambar canvas menjadi format gambar URL (Base64)
+        const imageUrl = canvas.toDataURL("image/jpeg");
+        
+        // Suntikkan gambarnya langsung menggantikan img/livecam/keogram.jpg
+        img.src = imageUrl;
+        img.classList.remove("need-thumb"); // Hapus class penanda agar tidak terjadi loop berulang
+    });
+});
