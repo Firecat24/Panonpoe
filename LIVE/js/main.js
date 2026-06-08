@@ -129,3 +129,104 @@ archiveButtons.forEach(button => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Logika Perpindahan Tab Menu
+    const tabButtons = document.querySelectorAll(".archive-btn");
+    const tabContents = document.querySelectorAll(".archive-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+            button.classList.add("active");
+            document.getElementById(targetId).classList.add("active");
+        });
+    });
+
+    // Logika Pop-up Pemutar Video & Gambar Pintar
+    const modal = document.getElementById("videoPopupModal");
+    const modalVideo = document.getElementById("popupVideoPlayer");
+    const modalImage = document.getElementById("popupImageViewer");
+    const closeBtn = document.querySelector(".video-popup-close");
+    const videoCards = document.querySelectorAll(".video-item-card");
+
+    videoCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const fileSrc = card.getAttribute("data-file-src"); // Wajib data-file-src
+            const fileType = card.getAttribute("data-file-type"); // Wajib data-file-type
+            
+            if (fileSrc) {
+                modalVideo.style.display = "none";
+                modalImage.style.display = "none";
+
+                if (fileType === "video") {
+                    modalVideo.src = fileSrc;
+                    modalVideo.load();
+                    modalVideo.style.display = "block";
+                    modal.classList.add("show");
+                    modalVideo.play().catch(err => console.log("Autoplay blocked"));
+                } else if (fileType === "image") {
+                    modalImage.src = fileSrc;
+                    modalImage.style.display = "block";
+                    modal.classList.add("show");
+                }
+            }
+        });
+    });
+
+    function closeModal() {
+        modal.classList.remove("show");
+        modalVideo.pause();
+        modalVideo.src = "";
+        modalImage.src = "";
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+});
+
+// Logika Perpindahan Tab Menu Otomatis (Mendukung Pagination Reload)
+const tabButtons = document.querySelectorAll(".archive-btn");
+const tabContents = document.querySelectorAll(".archive-content");
+
+// Cek dulu dari URL, variabel halaman mana yang aktif saat ini
+const urlParams = new URLSearchParams(window.location.search);
+let activeTabId = "timelapse-content"; // Default awal
+
+if (urlParams.has('p_startrail')) {
+    activeTabId = "startrail-content";
+} else if (urlParams.has('p_keogram')) {
+    activeTabId = "keogram-content";
+}
+
+// Set tab aktif secara otomatis sesuai halaman yang sedang dibuka
+tabButtons.forEach(btn => {
+    if(btn.getAttribute("data-target") === activeTabId) {
+        btn.classList.add("active");
+    } else {
+        btn.classList.remove("active");
+    }
+});
+
+tabContents.forEach(content => {
+    if(content.getAttribute("id") === activeTabId) {
+        content.classList.add("active");
+    } else {
+        content.classList.remove("active");
+    }
+});
+
+// Jalankan fungsi klik manual seperti biasa agar tombol navigasi tab tetap bisa diklik bebas
+tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabContents.forEach(content => content.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(targetId).classList.add("active");
+    });
+});

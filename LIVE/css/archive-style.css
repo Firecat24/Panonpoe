@@ -1,0 +1,163 @@
+/* Custom CSS untuk Folder Grid & Pop-up Video Panonpoe */
+
+.archive-folder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.video-item-card {
+    background: #1a2230;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.video-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #000;
+}
+
+.video-thumbnail-wrapper img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay-icon {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.video-item-card:hover .play-overlay-icon {
+    opacity: 1;
+}
+
+.play-icon {
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(30, 144, 255, 0.8);
+    width: 45px; height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding-left: 4px;
+}
+
+.video-title {
+    display: block;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.archive-content {
+    display: none;
+}
+
+.archive-content.active {
+    display: block;
+}
+
+/* Styling Popup Pemutar Video */
+.video-popup-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.video-popup-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video-popup-container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-popup-close {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 100000;
+    line-height: 1;
+}
+
+.video-popup-body video {
+    width: 100%;
+    display: block;
+}
+/* Styling Navigasi Halaman (Pagination) */
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.btn-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1a2230;
+    color: #a0aec0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.btn-page:hover {
+    background: #008b9b; /* Warna cyan/biru seperti tombol Startrail aktif Anda */
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-page.active {
+    background: #00a2b9; /* Warna tombol aktif */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 162, 185, 0.4);
+    border: none;
+}
